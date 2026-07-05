@@ -40,13 +40,14 @@
     <header class="fixed top-0 left-0 w-full z-50 bg-[#121317]/80 backdrop-blur-md border-b border-white/10">
         <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
             <a class="font-['Chivo'] text-2xl font-black text-primary tracking-tighter" href="#">RAMS.STATS</a>
-            <nav class="hidden md:flex gap-6 lg:gap-8">
+            <nav class="hidden md:flex gap-4 lg:gap-6">
                 <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#about">About</a>
                 <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#education">Education</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#certificates">Certificates</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#courses">Courses</a>
                 <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#projects">Projects</a>
                 <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#organizations">Organizations</a>
                 <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#volunteering">Volunteering</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#contact">Contact</a>
             </nav>
             <div class="hidden md:flex">
                 <a href="#" class="shimmer-btn text-[#00363a] bg-primary px-6 py-2 rounded-full font-bold text-sm tracking-wide transition-all hover:opacity-90">Resume</a>
@@ -60,7 +61,6 @@
     <!-- About / Hero Section -->
     <section id="about" class="pt-40 pb-16 px-6 max-w-6xl mx-auto reveal-on-scroll active">
         <div class="grid md:grid-cols-12 gap-8 items-center">
-            <!-- Left Content: Text Profile -->
             <div class="md:col-span-8 text-left space-y-6 order-2 md:order-1">
                 <div class="inline-block bg-white/5 px-4 py-1.5 border-l-2 border-primary">
                     <p class="font-['JetBrains_Mono'] text-xs text-primary flex items-center gap-2">
@@ -76,7 +76,6 @@
                     A statistics student at Universitas Negeri Jakarta with a strong focus on Data Analysis. Skilled in processing quantitative data, identifying trends, and translating numbers into clear, actionable business insights.
                 </p>
                 
-                <!-- Technical Skills Badges -->
                 <div class="flex flex-wrap gap-2 pt-2">
                     <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-xs font-['JetBrains_Mono'] text-white/80">Microsoft Excel & Spreadsheet</span>
                     <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-xs font-['JetBrains_Mono'] text-white/80">Power BI & Tableau</span>
@@ -86,7 +85,6 @@
                 </div>
             </div>
 
-            <!-- Right Content: Profile Photo Display -->
             <div class="md:col-span-4 flex justify-center order-1 md:order-2">
                 <div class="relative group w-64 h-64 md:w-72 md:h-72">
                     <div class="absolute inset-0 border border-primary/30 rounded-2xl translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
@@ -140,11 +138,10 @@
         </div>
     </section>
 
-    <!-- Licenses & Certifications Section -->
-    <section id="certificates" class="py-16 px-6 max-w-5xl mx-auto reveal-on-scroll active">
-        <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-12">Licenses & Certifications</h2>
+    <!-- Courses Section -->
+    <section id="courses" class="py-16 px-6 max-w-5xl mx-auto reveal-on-scroll active">
+        <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-12">Courses</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Cert 1 -->
             <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex gap-4 glow-hover">
                 <span class="material-symbols-outlined text-primary text-3xl">table_rows</span>
                 <div>
@@ -153,7 +150,6 @@
                     <p class="text-xs font-['JetBrains_Mono'] text-primary/80 mt-2">Skills: Microsoft Excel</p>
                 </div>
             </div>
-            <!-- Cert 2 -->
             <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex gap-4 glow-hover">
                 <span class="material-symbols-outlined text-primary text-3xl">database</span>
                 <div>
@@ -163,7 +159,6 @@
                     <p class="text-xs font-['JetBrains_Mono'] text-primary/80 mt-2">Skills: MySQL, SQL</p>
                 </div>
             </div>
-            <!-- Cert 3 -->
             <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex gap-4 glow-hover">
                 <span class="material-symbols-outlined text-primary text-3xl">analytics</span>
                 <div>
@@ -173,7 +168,6 @@
                     <p class="text-xs font-['JetBrains_Mono'] text-primary/80 mt-2">Skills: Python (Programming Language)</p>
                 </div>
             </div>
-            <!-- Cert 4 -->
             <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex gap-4 glow-hover">
                 <span class="material-symbols-outlined text-primary text-3xl">code</span>
                 <div>
@@ -204,7 +198,6 @@
 
         <!-- Personal Projects Content -->
         <div id="tab-content-personal" class="grid md:grid-cols-2 gap-8 transition-all duration-500">
-            <!-- Proj 1 -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-gradient-to-br from-emerald-900 to-black border-b border-white/10 relative">
@@ -227,7 +220,6 @@
                     </a>
                 </div>
             </div>
-            <!-- Proj 2 -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-gradient-to-br from-blue-900 to-black border-b border-white/10 relative">
@@ -254,7 +246,6 @@
 
         <!-- Group Projects Content -->
         <div id="tab-content-group" class="grid md:grid-cols-2 gap-8 transition-all duration-500 hidden">
-            <!-- Proj 1 -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-gradient-to-br from-amber-900 to-black border-b border-white/10 relative">
@@ -277,7 +268,6 @@
                     </a>
                 </div>
             </div>
-            <!-- Proj 2 -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-gradient-to-br from-purple-900 to-black border-b border-white/10 relative">
@@ -307,7 +297,6 @@
     <section id="organizations" class="py-16 px-6 max-w-4xl mx-auto reveal-on-scroll active">
         <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-12">Organizations</h2>
         <div class="space-y-8">
-            <!-- Org 1 -->
             <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
                 <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-2"></div>
                 <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">Jul 2024 – Jul 2025</span>
@@ -319,7 +308,6 @@
                     <li>Demonstrated swift and responsive problem-solving skills in resolving technical and operational bottlenecks directly in the field.</li>
                 </ol>
             </div>
-            <!-- Org 2 -->
             <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
                 <div class="absolute w-3 h-3 bg-primary/50 rounded-full -left-[7px] top-2"></div>
                 <span class="text-xs font-['JetBrains_Mono'] text-white/40">Feb 2022 – Dec 2023</span>
@@ -338,7 +326,6 @@
     <section id="volunteering" class="py-16 px-6 max-w-4xl mx-auto reveal-on-scroll active">
         <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-12">Volunteering</h2>
         <div class="space-y-8">
-            <!-- Vol 1 -->
             <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
                 <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-2"></div>
                 <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">Jul 2024 – Aug 2024</span>
@@ -348,7 +335,6 @@
                     Served as a dual-role committee member responsible for managing both emergency medical responses and creative fundraising strategies for the Statistics Freshmen Orientation (PKKMB Statistika).
                 </p>
             </div>
-            <!-- Vol 2 -->
             <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
                 <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-2"></div>
                 <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">Sep 2024</span>
@@ -358,7 +344,6 @@
                     Served as a Logistics and Operations Staff for "Share and Talk about Statistics (STOKASTIK) 2024," a seminar and talk show event held by the Statistics Student Association (BEMP Statistika).
                 </p>
             </div>
-            <!-- Vol 3 -->
             <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
                 <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-2"></div>
                 <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">Jun 2024 – Jul 2024</span>
@@ -367,6 +352,34 @@
                 <p class="text-on-surface-variant text-sm leading-relaxed">
                     Served as an Event Operations Committee member for the "Festival Community Development (FESCOM) 2024," an initiative organized by Desa Binaan FMIPA UNJ focusing on community empowerment.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6 max-w-4xl mx-auto reveal-on-scroll active">
+        <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-6">Get In Touch</h2>
+        <p class="text-on-surface-variant text-center max-w-xl mx-auto mb-12">
+            Feel free to reach out for internship opportunities, project collaborations, or statistical analysis consultations.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Phone -->
+            <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex flex-col items-center text-center glow-hover">
+                <span class="material-symbols-outlined text-primary text-3xl mb-3">call</span>
+                <h3 class="font-bold text-white mb-1">Phone</h3>
+                <a href="tel:081218620566" class="text-sm text-on-surface-variant hover:text-primary transition-colors font-['JetBrains_Mono']">081218620566</a>
+            </div>
+            <!-- Email -->
+            <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex flex-col items-center text-center glow-hover">
+                <span class="material-symbols-outlined text-primary text-3xl mb-3">mail</span>
+                <h3 class="font-bold text-white mb-1">Email</h3>
+                <a href="mailto:raahmadazmyr@gmail.com" class="text-sm text-on-surface-variant hover:text-primary transition-colors font-['JetBrains_Mono'] break-all">raahmadazmyr@gmail.com</a>
+            </div>
+            <!-- LinkedIn -->
+            <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex flex-col items-center text-center glow-hover">
+                <span class="material-symbols-outlined text-primary text-3xl mb-3">account_circle</span>
+                <h3 class="font-bold text-white mb-1">LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/rahmad-azmy-rizkiyansyah-dalimunthe" target="_blank" class="text-sm text-on-surface-variant hover:text-primary transition-colors font-['JetBrains_Mono']">View Profile</a>
             </div>
         </div>
     </section>
@@ -380,17 +393,18 @@
     <div id="mobile-menu-overlay" class="fixed inset-0 z-[60] bg-[#121317]/95 backdrop-blur-xl translate-x-full transition-transform duration-500 md:hidden flex flex-col">
         <div class="flex justify-between items-center h-20 px-6">
             <a class="font-['Chivo'] text-2xl font-black text-primary tracking-tighter" href="#">RAMS.STATS</a>
-            <button id="mobile-menu-close" class="p-2 text-white" onclick="toggleMenu()">
+            <button id="mobile-menu-close" class="p-2 text-white">
                 <span class="material-symbols-outlined text-3xl">close</span>
             </button>
         </div>
         <nav class="flex flex-col items-center justify-center flex-grow gap-6 text-center">
             <a class="text-primary text-xl font-bold" href="#about" onclick="toggleMenu()">About</a>
             <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#education" onclick="toggleMenu()">Education</a>
-            <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#certificates" onclick="toggleMenu()">Certificates</a>
+            <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#courses" onclick="toggleMenu()">Courses</a>
             <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#projects" onclick="toggleMenu()">Projects</a>
             <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#organizations" onclick="toggleMenu()">Organizations</a>
             <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#volunteering" onclick="toggleMenu()">Volunteering</a>
+            <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#contact" onclick="toggleMenu()">Contact</a>
         </nav>
     </div>
 
