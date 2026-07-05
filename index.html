@@ -85,15 +85,15 @@
                 </div>
             </div>
 
-            <!-- Profile Photo (Correctly pointed to images/me.png) -->
+            <!-- Profile Photo (Corrected to images/me.JPG) -->
             <div class="md:col-span-4 flex justify-center order-1 md:order-2">
                 <div class="relative group w-64 h-64 md:w-72 md:h-72">
                     <div class="absolute inset-0 border border-primary/30 rounded-2xl translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
                     <div class="absolute inset-0 glass-card rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex items-center justify-center">
-                        <img src="images/me.png" alt="Rahmad Azmy Profile Photo" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="images/me.JPG" alt="Rahmad Azmy Profile Photo" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="absolute inset-0 hidden flex flex-col items-center justify-center text-center bg-[#1a1b20]">
                             <span class="font-['Chivo'] text-5xl font-black text-primary/40 tracking-tighter">RA</span>
-                            <span class="text-[10px] text-white/30 font-['JetBrains_Mono'] mt-3">images/me.png</span>
+                            <span class="text-[10px] text-white/30 font-['JetBrains_Mono'] mt-3">images/me.JPG</span>
                         </div>
                     </div>
                 </div>
@@ -197,9 +197,9 @@
             </div>
         </div>
 
-        <!-- Personal Projects Content (Corrected to images/ directory paths) -->
+        <!-- Personal Projects Content -->
         <div id="tab-content-personal" class="grid md:grid-cols-2 gap-8 transition-all duration-500">
-            <!-- P1: Excel Dashboard (Personal1.jpeg) -->
+            <!-- P1: Excel Dashboard -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
@@ -219,7 +219,7 @@
                 </div>
             </div>
 
-            <!-- P2: Power BI Dashboard (Personal 2.png) -->
+            <!-- P2: Power BI Dashboard -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
@@ -239,7 +239,7 @@
                 </div>
             </div>
 
-            <!-- P3: Tableau Dashboard (Personal 3.png) -->
+            <!-- P3: Tableau Dashboard -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
@@ -259,7 +259,7 @@
                 </div>
             </div>
 
-            <!-- P4: ML Modeling Regression Tree (Personal 4.png) -->
+            <!-- P4: ML Modeling Regression Tree -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
@@ -273,16 +273,24 @@
                     </div>
                 </div>
                 <div class="p-6 pt-0">
-                    <a href="https://drive.google.com/drive/folders/1VPaOu-no99ez54fnnIF1S8busxWgTCZ5?usp=sharing" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
+                    <a href="https://drive.google.com/drive/folders/1VPaOu-no99ez54fnnIF1S8busxWgTCZ5?usp=sharing" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
                         <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
                     </a>
                 </div>
             </div>
+
+            <!-- View More Personal Projects Link -->
+            <div class="col-span-1 md:col-span-2 flex justify-center mt-6">
+                <a href="https://drive.google.com/drive/folders/1vEXBorkRCy6aG-iWs8xOzvqeqRcK5qjf?usp=sharing" target="_blank" class="group inline-flex items-center gap-2 border border-primary/30 text-primary px-8 py-3 rounded-full font-['JetBrains_Mono'] text-sm hover:bg-primary/5 hover:border-primary transition-all duration-300">
+                    View More Personal Projects
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </a>
+            </div>
         </div>
 
-        <!-- Group Projects Content (Corrected to images/ directory paths) -->
+        <!-- Group Projects Content -->
         <div id="tab-content-group" class="grid md:grid-cols-2 gap-8 transition-all duration-500 hidden">
-            <!-- G1: Publikasi Survey (Group 1.jpg) -->
+            <!-- G1: Publikasi Survey -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
@@ -302,7 +310,7 @@
                 </div>
             </div>
 
-            <!-- G2: R Shiny Application Time Series (Group 2.png) -->
+            <!-- G2: R Shiny Application Time Series -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
@@ -322,7 +330,7 @@
                 </div>
             </div>
 
-            <!-- G3: Regression Tree (Group 3.png) -->
+            <!-- G3: Regression Tree -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
@@ -342,7 +350,7 @@
                 </div>
             </div>
 
-            <!-- G4: Infografis (Group 4.png) -->
+            <!-- G4: Infografis -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
@@ -360,6 +368,14 @@
                         <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
                     </a>
                 </div>
+            </div>
+
+            <!-- View More Group Projects Link -->
+            <div class="col-span-1 md:col-span-2 flex justify-center mt-6">
+                <a href="https://drive.google.com/drive/folders/1qNYclHyksabWeqF8UPPwpYQbtY6KVutJ?usp=sharing" target="_blank" class="group inline-flex items-center gap-2 border border-primary/30 text-primary px-8 py-3 rounded-full font-['JetBrains_Mono'] text-sm hover:bg-primary/5 hover:border-primary transition-all duration-300">
+                    View More Group Projects
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </a>
             </div>
         </div>
     </section>
