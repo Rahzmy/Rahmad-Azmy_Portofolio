@@ -36,48 +36,73 @@
     <div class="mesh-gradient"></div>
     <div class="scanline-overlay"></div>
 
+    <!-- Header / Navigation -->
     <header class="fixed top-0 left-0 w-full z-50 bg-[#121317]/80 backdrop-blur-md border-b border-white/10">
         <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
             <a class="font-['Chivo'] text-2xl font-black text-primary tracking-tighter" href="#">RAMS.STATS</a>
-            <nav class="hidden md:flex gap-8">
-                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#education">Education</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#projects">Projects</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#experience">Organization</a>
+            <nav class="hidden md:flex gap-6 lg:gap-8">
+                <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#about">About</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#education">Education</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#certificates">Certificates</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#projects">Projects</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#organizations">Organizations</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#volunteering">Volunteering</a>
             </nav>
             <div class="hidden md:flex">
-                <a href="#" class="shimmer-btn text-[#00363a] bg-primary px-6 py-2 rounded-full font-bold text-sm tracking-wide">Resume</a>
+                <a href="#" class="shimmer-btn text-[#00363a] bg-primary px-6 py-2 rounded-full font-bold text-sm tracking-wide transition-all hover:opacity-90">Resume</a>
             </div>
-            <button id="mobile-menu-open" class="md:hidden p-2 text-white">
+            <button id="mobile-menu-open" class="md:hidden p-2 text-white" onclick="toggleMenu()">
                 <span class="material-symbols-outlined text-3xl">menu</span>
             </button>
         </div>
     </header>
 
-    <section id="about" class="pt-40 pb-16 px-6 max-w-4xl mx-auto text-center reveal-on-scroll active">
-        <div class="inline-block bg-white/5 px-4 py-1.5 border-l-2 border-primary mb-6">
-            <p class="font-['JetBrains_Mono'] text-xs text-primary flex items-center gap-2">
-                <span class="material-symbols-outlined text-[14px]">terminal</span>
-                status: undergraduate_student
-            </p>
-        </div>
-        <h1 class="font-['Chivo'] text-4xl md:text-6xl font-black text-white tracking-tight mb-4">
-            Hi, I'm <span class="text-primary">Rahmad Azmy Rizkiyansyah D.</span>
-        </h1>
-        <p class="font-['JetBrains_Mono'] text-primary text-md md:text-lg mb-6">Statistics Undergraduate | Data Science Enthusiast</p>
-        <p class="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            A statistics student at Universitas Negeri Jakarta with a strong focus on Data Analysis. Skilled in processing quantitative data, identifying trends, and translating numbers into clear, actionable business insights.
-        </p>
-        
-        <div class="flex flex-wrap justify-center gap-3">
-            <span class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-['JetBrains_Mono']">Microsoft Excel & Spreadsheet</span>
-            <span class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-['JetBrains_Mono']">Power BI & Tableau</span>
-            <span class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-['JetBrains_Mono']">Python & R</span>
-            <span class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-['JetBrains_Mono']">SQL</span>
-            <span class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-['JetBrains_Mono']">Minitab & SPSS</span>
+    <!-- About / Hero Section -->
+    <section id="about" class="pt-40 pb-16 px-6 max-w-6xl mx-auto reveal-on-scroll active">
+        <div class="grid md:grid-cols-12 gap-8 items-center">
+            <!-- Left Content: Text Profile -->
+            <div class="md:col-span-8 text-left space-y-6 order-2 md:order-1">
+                <div class="inline-block bg-white/5 px-4 py-1.5 border-l-2 border-primary">
+                    <p class="font-['JetBrains_Mono'] text-xs text-primary flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[14px]">terminal</span>
+                        status: undergraduate_student
+                    </p>
+                </div>
+                <h1 class="font-['Chivo'] text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
+                    Hi, I'm <span class="text-primary">Rahmad Azmy Rizkiyansyah D.</span>
+                </h1>
+                <p class="font-['JetBrains_Mono'] text-primary text-md md:text-lg">Statistics Undergraduate | Data Science Enthusiast</p>
+                <p class="text-on-surface-variant text-base md:text-lg leading-relaxed max-w-3xl">
+                    A statistics student at Universitas Negeri Jakarta with a strong focus on Data Analysis. Skilled in processing quantitative data, identifying trends, and translating numbers into clear, actionable business insights.
+                </p>
+                
+                <!-- Technical Skills Badges -->
+                <div class="flex flex-wrap gap-2 pt-2">
+                    <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-xs font-['JetBrains_Mono'] text-white/80">Microsoft Excel & Spreadsheet</span>
+                    <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-xs font-['JetBrains_Mono'] text-white/80">Power BI & Tableau</span>
+                    <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-xs font-['JetBrains_Mono'] text-white/80">Python & R</span>
+                    <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-xs font-['JetBrains_Mono'] text-white/80">SQL</span>
+                    <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-xs font-['JetBrains_Mono'] text-white/80">Minitab & SPSS</span>
+                </div>
+            </div>
+
+            <!-- Right Content: Profile Photo Display -->
+            <div class="md:col-span-4 flex justify-center order-1 md:order-2">
+                <div class="relative group w-64 h-64 md:w-72 md:h-72">
+                    <div class="absolute inset-0 border border-primary/30 rounded-2xl translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
+                    <div class="absolute inset-0 glass-card rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex items-center justify-center">
+                        <img src="images/profile.png" alt="Rahmad Azmy Profile Photo" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="absolute inset-0 hidden flex flex-col items-center justify-center text-center bg-[#1a1b20]">
+                            <span class="font-['Chivo'] text-5xl font-black text-primary/40 tracking-tighter">RA</span>
+                            <span class="text-[10px] text-white/30 font-['JetBrains_Mono'] mt-3">images/profile.png</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Education Section -->
     <section id="education" class="py-16 px-6 max-w-4xl mx-auto reveal-on-scroll active">
         <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-12">Education</h2>
         <div class="space-y-6">
@@ -115,6 +140,53 @@
         </div>
     </section>
 
+    <!-- Licenses & Certifications Section -->
+    <section id="certificates" class="py-16 px-6 max-w-5xl mx-auto reveal-on-scroll active">
+        <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-12">Licenses & Certifications</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Cert 1 -->
+            <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex gap-4 glow-hover">
+                <span class="material-symbols-outlined text-primary text-3xl">table_rows</span>
+                <div>
+                    <h3 class="font-bold text-lg text-white">Intensive Bootcamp 3 Weeks - Microsoft Excel</h3>
+                    <p class="text-sm text-white/60">KarirNex &bull; Issued Jun 2026</p>
+                    <p class="text-xs font-['JetBrains_Mono'] text-primary/80 mt-2">Skills: Microsoft Excel</p>
+                </div>
+            </div>
+            <!-- Cert 2 -->
+            <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex gap-4 glow-hover">
+                <span class="material-symbols-outlined text-primary text-3xl">database</span>
+                <div>
+                    <h3 class="font-bold text-lg text-white">Belajar Dasar Structured Query Language (SQL)</h3>
+                    <p class="text-sm text-white/60">Dicoding Indonesia &bull; Issued Jun 2026</p>
+                    <p class="text-xs text-white/40 font-['JetBrains_Mono'] mt-1">ID: JMZVOW8YOXN9</p>
+                    <p class="text-xs font-['JetBrains_Mono'] text-primary/80 mt-2">Skills: MySQL, SQL</p>
+                </div>
+            </div>
+            <!-- Cert 3 -->
+            <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex gap-4 glow-hover">
+                <span class="material-symbols-outlined text-primary text-3xl">analytics</span>
+                <div>
+                    <h3 class="font-bold text-lg text-white">Associate Data Scientist (Digital Talent Academy)</h3>
+                    <p class="text-sm text-white/60">Digital Talent Scholarship &bull; Issued Jun 2026</p>
+                    <p class="text-xs text-white/40 font-['JetBrains_Mono'] mt-1">ID: 21211993840-6628</p>
+                    <p class="text-xs font-['JetBrains_Mono'] text-primary/80 mt-2">Skills: Python (Programming Language)</p>
+                </div>
+            </div>
+            <!-- Cert 4 -->
+            <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex gap-4 glow-hover">
+                <span class="material-symbols-outlined text-primary text-3xl">code</span>
+                <div>
+                    <h3 class="font-bold text-lg text-white">Memulai Pemrograman dengan Python</h3>
+                    <p class="text-sm text-white/60">Dicoding Indonesia &bull; Issued Jun 2026</p>
+                    <p class="text-xs text-white/40 font-['JetBrains_Mono'] mt-1">ID: EYX4QNOWJPDL</p>
+                    <p class="text-xs font-['JetBrains_Mono'] text-primary/80 mt-2">Skills: Python (Programming Language)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
     <section id="projects" class="py-16 px-6 max-w-6xl mx-auto reveal-on-scroll active">
         <div class="text-center mb-12">
             <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white mb-4">Featured Projects</h2>
@@ -130,11 +202,13 @@
             </div>
         </div>
 
+        <!-- Personal Projects Content -->
         <div id="tab-content-personal" class="grid md:grid-cols-2 gap-8 transition-all duration-500">
+            <!-- Proj 1 -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-gradient-to-br from-emerald-900 to-black border-b border-white/10 relative">
-                        <img src="images/ecommerce-excel-preview.png" alt="E-commerce Excel Dashboard Preview" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="images/ecommerce-excel-preview.png" alt="Excel Dashboard" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="absolute inset-0 hidden flex-col items-center justify-center p-6 text-center bg-[#1a1b20]">
                             <span class="material-symbols-outlined text-5xl text-primary/40 mb-2">table_chart</span>
                             <span class="text-xs text-white/40 font-['JetBrains_Mono']">images/ecommerce-excel-preview.png</span>
@@ -153,11 +227,11 @@
                     </a>
                 </div>
             </div>
-
+            <!-- Proj 2 -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-gradient-to-br from-blue-900 to-black border-b border-white/10 relative">
-                        <img src="images/superstore-powerbi-preview.png" alt="Superstore Power BI Dashboard Preview" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="images/superstore-powerbi-preview.png" alt="Power BI Dashboard" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="absolute inset-0 hidden flex-col items-center justify-center p-6 text-center bg-[#1a1b20]">
                             <span class="material-symbols-outlined text-5xl text-primary/40 mb-2">bar_chart</span>
                             <span class="text-xs text-white/40 font-['JetBrains_Mono']">images/superstore-powerbi-preview.png</span>
@@ -178,11 +252,13 @@
             </div>
         </div>
 
+        <!-- Group Projects Content -->
         <div id="tab-content-group" class="grid md:grid-cols-2 gap-8 transition-all duration-500 hidden">
+            <!-- Proj 1 -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-gradient-to-br from-amber-900 to-black border-b border-white/10 relative">
-                        <img src="images/mini-survey-book-preview.png" alt="Mini Survey Book Preview" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="images/mini-survey-book-preview.png" alt="Mini Survey Book" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="absolute inset-0 hidden flex-col items-center justify-center p-6 text-center bg-[#1a1b20]">
                             <span class="material-symbols-outlined text-5xl text-primary/40 mb-2">menu_book</span>
                             <span class="text-xs text-white/40 font-['JetBrains_Mono']">images/mini-survey-book-preview.png</span>
@@ -201,11 +277,11 @@
                     </a>
                 </div>
             </div>
-
+            <!-- Proj 2 -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-gradient-to-br from-purple-900 to-black border-b border-white/10 relative">
-                        <img src="images/r-shiny-preview.png" alt="R Shiny Project Preview" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="images/r-shiny-preview.png" alt="R Shiny Project" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="absolute inset-0 hidden flex-col items-center justify-center p-6 text-center bg-[#1a1b20]">
                             <span class="material-symbols-outlined text-5xl text-primary/40 mb-2">terminal</span>
                             <span class="text-xs text-white/40 font-['JetBrains_Mono']">images/r-shiny-preview.png</span>
@@ -227,47 +303,94 @@
         </div>
     </section>
 
-    <section id="experience" class="py-16 px-6 max-w-4xl mx-auto reveal-on-scroll active">
-        <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-12">Organizational & Volunteer Experience</h2>
+    <!-- Organizations Section -->
+    <section id="organizations" class="py-16 px-6 max-w-4xl mx-auto reveal-on-scroll active">
+        <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-12">Organizations</h2>
         <div class="space-y-8">
+            <!-- Org 1 -->
             <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
                 <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-2"></div>
-                <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">July 2024 – July 2025</span>
-                <h3 class="text-xl font-bold mt-2">Desa Binaan FMIPA UNJ — Infrastructure and Logistics Staff</h3>
-                <p class="text-sm text-white/60 mb-2">Universitas Negeri Jakarta</p>
-                <p class="text-on-surface-variant text-sm leading-relaxed">
-                    Fully supported the smooth execution of community service programs, including managing operational logistics as an Event Logistics and Operations Staff for FESCOM 2024, a national-level student competition and festival. Demonstrated quick problem-solving skills and responsiveness in resolving technical and operational challenges on-site.
-                </p>
+                <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">Jul 2024 – Jul 2025</span>
+                <h3 class="text-xl font-bold mt-2">Comdev Desa Binaan FMIPA UNJ</h3>
+                <p class="text-sm text-white/60 mb-3">Staff of Logistics & Infrastructure Division</p>
+                <ol class="space-y-2 text-on-surface-variant text-sm list-decimal pl-4">
+                    <li>Planned, managed, and distributed logistical resources efficiently to fully support the seamless execution of community service and empowerment programs.</li>
+                    <li>Coordinated proactively with internal teams and local community leaders to ensure the readiness of infrastructure and facilities for resident education initiatives.</li>
+                    <li>Demonstrated swift and responsive problem-solving skills in resolving technical and operational bottlenecks directly in the field.</li>
+                </ol>
             </div>
-
+            <!-- Org 2 -->
             <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
                 <div class="absolute w-3 h-3 bg-primary/50 rounded-full -left-[7px] top-2"></div>
                 <span class="text-xs font-['JetBrains_Mono'] text-white/40">Feb 2022 – Dec 2023</span>
-                <h3 class="text-xl font-bold mt-2">MPK SMA Negeri 2 Cileungsi — Vice Chairman</h3>
-                <p class="text-sm text-white/60 mb-2">High School Representative Council</p>
+                <h3 class="text-xl font-bold mt-2">Majelis Perwakilan Kelas SMA Negeri 2 Cilengsi</h3>
+                <p class="text-sm text-white/60 mb-3">Vice Chairman</p>
+                <ol class="space-y-2 text-on-surface-variant text-sm list-decimal pl-4">
+                    <li>Assisted the Chairman in leading the student parliamentary body while executing objective monitoring and evaluation functions regarding the effectiveness of Student Council (OSIS) work programs.</li>
+                    <li>Responsible for gathering, analyzing, and communicating aspirations from hundreds of students to school management to foster inclusive institutional policies.</li>
+                    <li>Coordinated various public hearings (RDP) and school plenary sessions, sharpening skills in negotiation, public speaking, and conflict resolution.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteering Section -->
+    <section id="volunteering" class="py-16 px-6 max-w-4xl mx-auto reveal-on-scroll active">
+        <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-12">Volunteering</h2>
+        <div class="space-y-8">
+            <!-- Vol 1 -->
+            <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
+                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-2"></div>
+                <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">Jul 2024 – Aug 2024</span>
+                <h3 class="text-xl font-bold mt-2">Medical and Fundraising Committee At PKKMB Statistics 2024</h3>
+                <p class="text-sm text-white/60 mb-2">State University of Jakarta (Universitas Negeri Jakarta)</p>
                 <p class="text-on-surface-variant text-sm leading-relaxed">
-                    Assisted the Chairman of MPK in leading the organization and objectively executing supervision and evaluation functions toward the OSIS work programs. Responsible for gathering, analyzing, and communicating aspirations from hundreds of students to the school management to foster inclusive policies. Coordinated public hearings and assembly sessions, honing negotiation, public communication, and conflict resolution skills.
+                    Served as a dual-role committee member responsible for managing both emergency medical responses and creative fundraising strategies for the Statistics Freshmen Orientation (PKKMB Statistika).
+                </p>
+            </div>
+            <!-- Vol 2 -->
+            <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
+                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-2"></div>
+                <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">Sep 2024</span>
+                <h3 class="text-xl font-bold mt-2">Logistics and Documentation Staff At Share and Talk about Statistics (STOKASTIK)</h3>
+                <p class="text-sm text-white/60 mb-2">State University of Jakarta (Universitas Negeri Jakarta)</p>
+                <p class="text-on-surface-variant text-sm leading-relaxed">
+                    Served as a Logistics and Operations Staff for "Share and Talk about Statistics (STOKASTIK) 2024," a seminar and talk show event held by the Statistics Student Association (BEMP Statistika).
+                </p>
+            </div>
+            <!-- Vol 3 -->
+            <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
+                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-2"></div>
+                <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">Jun 2024 – Jul 2024</span>
+                <h3 class="text-xl font-bold mt-2">Event Logistics and Operations Staff At Festival Community Development (FESCOM) 2024</h3>
+                <p class="text-sm text-white/60 mb-2">Comdev Desa Binaan FMIPA UNJ</p>
+                <p class="text-on-surface-variant text-sm leading-relaxed">
+                    Served as an Event Operations Committee member for the "Festival Community Development (FESCOM) 2024," an initiative organized by Desa Binaan FMIPA UNJ focusing on community empowerment.
                 </p>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="border-t border-white/10 py-8 text-center text-xs text-white/40 font-['JetBrains_Mono']">
         <p>&copy; 2026 Rahmad Azmy Rizkiyansyah Dalimunthe. Powered by Stats & Code.</p>
     </footer>
 
+    <!-- Mobile Menu Overlay -->
     <div id="mobile-menu-overlay" class="fixed inset-0 z-[60] bg-[#121317]/95 backdrop-blur-xl translate-x-full transition-transform duration-500 md:hidden flex flex-col">
         <div class="flex justify-between items-center h-20 px-6">
             <a class="font-['Chivo'] text-2xl font-black text-primary tracking-tighter" href="#">RAMS.STATS</a>
-            <button id="mobile-menu-close" class="p-2 text-white">
+            <button id="mobile-menu-close" class="p-2 text-white" onclick="toggleMenu()">
                 <span class="material-symbols-outlined text-3xl">close</span>
             </button>
         </div>
-        <nav class="flex flex-col items-center justify-center flex-grow gap-10">
-            <a class="text-primary text-2xl font-bold" href="#about">About</a>
-            <a class="text-on-surface-variant text-2xl font-bold hover:text-primary" href="#education">Education</a>
-            <a class="text-on-surface-variant text-2xl font-bold hover:text-primary" href="#projects">Projects</a>
-            <a class="text-on-surface-variant text-2xl font-bold hover:text-primary" href="#experience">Organization</a>
+        <nav class="flex flex-col items-center justify-center flex-grow gap-6 text-center">
+            <a class="text-primary text-xl font-bold" href="#about" onclick="toggleMenu()">About</a>
+            <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#education" onclick="toggleMenu()">Education</a>
+            <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#certificates" onclick="toggleMenu()">Certificates</a>
+            <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#projects" onclick="toggleMenu()">Projects</a>
+            <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#organizations" onclick="toggleMenu()">Organizations</a>
+            <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#volunteering" onclick="toggleMenu()">Volunteering</a>
         </nav>
     </div>
 
