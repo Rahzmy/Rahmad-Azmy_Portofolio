@@ -5,13 +5,8 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Chivo:wght@700;900&amp;family=Geist:wght@400;500&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght=700;900&amp;family=Geist:wght=400;500&amp;family=JetBrains+Mono:wght=500;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
     <script id="tailwind-config">
@@ -27,410 +22,174 @@
                         "on-background": "#e3e2e8",
                         "primary": "#dbfcff",
                         "error-container": "#93000a",
-                        "on-secondary-container": "#3d6200",
-                        "outline-variant": "#3b494b",
-                        "primary-fixed-dim": "#00dbe9",
-                        "primary-fixed": "#7df4ff",
-                        "secondary-container": "#95e400",
-                        "on-primary-fixed-variant": "#004f54",
-                        "surface-dim": "#121317",
-                        "tertiary-fixed": "#e9ddff",
-                        "inverse-on-surface": "#2f3035",
-                        "on-secondary-fixed": "#112000",
-                        "outline": "#849495",
-                        "on-tertiary": "#3c0090",
-                        "on-error": "#690005",
-                        "on-secondary": "#203600",
-                        "on-primary-fixed": "#002022",
-                        "inverse-primary": "#006970",
-                        "tertiary-container": "#e1d2ff",
-                        "primary-container": "#00f0ff",
-                        "surface-tint": "#00dbe9",
-                        "on-error-container": "#ffdad6",
-                        "surface-container-low": "#1a1b20",
-                        "error": "#ffb4ab",
-                        "surface-container-high": "#292a2e",
-                        "surface-bright": "#38393e",
-                        "on-tertiary-fixed": "#23005b",
-                        "on-tertiary-fixed-variant": "#5700c9",
-                        "surface-container-lowest": "#0d0e12",
-                        "on-surface": "#e3e2e8",
-                        "background": "#121317",
-                        "secondary-fixed-dim": "#8fdb00",
-                        "tertiary": "#faf3ff",
-                        "secondary": "#bcff5f",
-                        "on-primary-container": "#006970",
-                        "secondary-fixed": "#a8f928",
-                        "on-surface-variant": "#b9cacb",
-                        "tertiary-fixed-dim": "#d1bcff",
-                        "on-secondary-fixed-variant": "#314f00",
-                        "surface-container": "#1f1f24",
-                        "surface": "#121317",
-                        "on-tertiary-container": "#7213ff"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "margin-mobile": "24px",
-                        "unit": "8px",
-                        "container-max": "1280px",
-                        "margin-desktop": "64px",
-                        "gutter": "24px",
-                        "section-gap": "128px"
-                    },
-                    "fontFamily": {
-                        "code-sm": ["JetBrains Mono"],
-                        "label-caps": ["JetBrains Mono"],
-                        "body-md": ["Geist"],
-                        "headline-xl": ["Chivo"],
-                        "headline-md": ["Chivo"],
-                        "headline-xl-mobile": ["Chivo"],
-                        "headline-lg": ["Chivo"],
-                        "body-lg": ["Geist"]
-                    },
-                    "fontSize": {
-                        "code-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "500" }],
-                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700" }],
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "headline-xl": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "900" }],
-                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "700" }],
-                        "headline-xl-mobile": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "900" }],
-                        "headline-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                        "on-secondary-container": "#32353a",
+                        "on-surface-variant": "#c7c5d0"
                     }
-                },
-            },
+                }
+            }
         }
     </script>
 </head>
 
-<body class="font-body-md text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
-    <div class="mesh-gradient" style="left: 6.57812px; top: 0.430136px;"></div>
+<body class="bg-[#121317] text-white overflow-x-hidden font-['Geist']">
+    <div class="mesh-gradient"></div>
     <div class="scanline-overlay"></div>
-    <!-- TopNavBar -->
-    <header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-[24px] border-b border-on-surface/10">
-        <div
-            class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <a class="font-headline-md text-headline-md font-black text-primary tracking-tighter hover:opacity-80 transition-opacity"
-                href="#">WEBDEV</a>
-            <nav class="hidden md:flex items-center gap-8">
-                <a class="text-primary border-b-2 border-primary pb-1 font-label-caps text-label-caps transition-all"
-                    href="#">Projects</a>
-                <a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors hover:translate-y-[-1px]"
-                    href="#">Experience</a>
-                <a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors hover:translate-y-[-1px]"
-                    href="#">About</a>
-                <a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors hover:translate-y-[-1px]"
-                    href="#">Contact</a>
-            </nav><button id="mobile-menu-open"
-                class="md:hidden flex items-center justify-center p-2 text-on-surface hover:text-primary transition-colors">
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#121317]/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a class="font-['Chivo'] text-2xl font-black text-primary tracking-tighter" href="#">RAMS.STATS</a>
+            <nav class="hidden md:flex gap-8">
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#projects">Projects</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#experience">Organization</a>
+            </nav>
+            <div class="hidden md:flex">
+                <a href="#" class="shimmer-btn text-[#00363a] bg-primary px-6 py-2 rounded-full font-bold text-sm tracking-wide">Resume</a>
+            </div>
+            <button id="mobile-menu-open" class="md:hidden p-2 text-white">
                 <span class="material-symbols-outlined text-3xl">menu</span>
-            </button>
-            <button
-                class="hidden md:flex shimmer-btn text-on-primary px-6 py-2 rounded-full font-label-caps text-label-caps hover:drop-shadow-[0_0_15px_rgba(219,252,255,0.4)] active:scale-95 transition-all duration-200">
-                Resume
             </button>
         </div>
     </header>
-    <main>
-        <!-- Hero Section -->
-        <section
-            class="min-h-screen flex items-center pt-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="w-full grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-                <div class="md:col-span-8 space-y-8">
-                    <div
-                        class="inline-block bg-surface-container-low px-4 py-2 border-l-2 border-primary animate-hero delay-1">
-                        <p class="font-code-sm text-code-sm text-primary flex items-center gap-2">
-                            <span class="material-symbols-outlined text-[14px]">terminal</span>
-                            system_status: online
-                        </p>
-                    </div>
-                    <h1
-                        class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface animate-hero delay-2">
-                        <span class="block">Hello World,</span>
-                        <span class="block text-primary">I am ALEX_DEV.</span>
-                        <span class="block">I build digital experiences.</span>
-                    </h1>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl animate-hero delay-3">
-                        Senior Full-Stack Engineer specializing in high-performance web architectures and immersive user
-                        interfaces. Currently pushing the boundaries of WebGL and React.
-                    </p>
-                    <div class="flex flex-wrap gap-4 pt-4 animate-hero delay-3">
-                        <button
-                            class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-caps text-label-caps hover:drop-shadow-[0_0_20px_rgba(219,252,255,0.5)] transition-all active:scale-95">
-                            Start a Project
-                        </button>
-                        <button
-                            class="border border-primary text-primary px-8 py-4 rounded-lg font-label-caps text-label-caps hover:bg-primary/5 transition-all active:scale-95">
-                            View Github
-                        </button>
-                    </div>
-                </div>
-                <div class="hidden md:block md:col-span-4 animate-hero delay-3">
-                    <div class="glass-card p-6 rounded-xl border-primary/20 relative overflow-hidden group">
-                        <div class="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
-                        <div class="relative z-10 font-code-sm text-code-sm space-y-2 text-on-surface-variant">
-                            <p class="text-secondary">class Developer {</p>
-                            <p class="pl-4">constructor() {</p>
-                            <p class="pl-8">this.name = <span class="text-primary">'Alex'</span>;</p>
-                            <p class="pl-8">this.traits = [<span class="text-primary">'Creative'</span>, <span
-                                    class="text-primary">'Technical'</span>];</p>
-                            <p class="pl-4">}</p>
-                            <p class="pl-4">async createExperience() {</p>
-                            <p class="pl-8 text-secondary">return await code.build();</p>
-                            <p class="pl-4">}</p>
-                            <p class="text-secondary">}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Projects Section -->
-        <section
-            class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal-on-scroll active">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-                <div class="space-y-4">
-                    <h2 class="font-headline-lg text-headline-lg text-on-surface">Latest Projects</h2>
-                    <div class="h-1 w-24 bg-primary"></div>
-                </div>
-                <button
-                    class="group flex items-center gap-2 font-label-caps text-label-caps text-primary hover:text-secondary transition-colors">
-                    View All Projects
-                    <span
-                        class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+
+    <section id="about" class="pt-40 pb-20 px-6 max-w-4xl mx-auto text-center reveal-on-scroll">
+        <h1 class="font-['Chivo'] text-4xl md:text-6xl font-black text-white tracking-tight mb-4">
+            Hi, I'm <span class="text-primary">Rahmad Azmy Rizkiyansyah D.</span>
+        </h1>
+        <p class="font-['JetBrains_Mono'] text-primary text-md md:text-lg mb-6">Statistics Undergraduate | Data Science Enthusiast</p>
+        <p class="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+            Mahasiswa Statistika Universitas Negeri Jakarta (FMIPA UNJ) dengan IPK 3.82. Fokus pada pemodelan statistika tingkat lanjut, analisis deret waktu, dan implementasi Machine Learning untuk solusi berbasis data.
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+            <span class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-['JetBrains_Mono']">R Programming</span>
+            <span class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-['JetBrains_Mono']">Python</span>
+            <span class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-['JetBrains_Mono']">SQL</span>
+            <span class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-['JetBrains_Mono']">Statistical Modeling</span>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto reveal-on-scroll">
+        <div class="text-center mb-12">
+            <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white mb-4">Featured Projects</h2>
+            <p class="text-on-surface-variant">Aplikasi interaktif dan analisis data yang telah saya kembangkan.</p>
+            
+            <div class="flex justify-center gap-4 mt-8">
+                <button onclick="switchTab('personal')" id="tab-btn-personal" class="px-6 py-2 rounded-full font-bold text-sm border transition-all duration-300 bg-primary text-[#00363a] border-primary">
+                    Personal Projects
+                </button>
+                <button onclick="switchTab('group')" id="tab-btn-group" class="px-6 py-2 rounded-full font-bold text-sm border transition-all duration-300 bg-transparent text-on-surface-variant border-white/10 hover:border-white/30">
+                    Group Projects
                 </button>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-                <!-- Project Card 1 -->
-                <div class="glass-card group rounded-xl overflow-hidden glow-hover">
-                    <div class="h-64 overflow-hidden relative">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            data-alt="A futuristic dashboard interface with complex data visualizations and neon blue glowing charts against a dark obsidian background."
-                            src="images/image-01.jpg">
-                        <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
-                    </div>
-                    <div class="p-8 space-y-4">
-                        <div class="flex gap-2">
-                            <span
-                                class="bg-surface-container-highest px-3 py-1 rounded-full font-code-sm text-[10px] text-secondary hover:bg-secondary/10 transition-colors cursor-default">REACT</span>
-                            <span
-                                class="bg-surface-container-highest px-3 py-1 rounded-full font-code-sm text-[10px] text-secondary hover:bg-secondary/10 transition-colors cursor-default">THREE.JS</span>
-                        </div>
-                        <h3
-                            class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
-                            NEON_DASH V2</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant">
-                            A real-time data visualization engine for high-frequency trading platforms.
-                        </p>
-                        <a class="inline-flex items-center gap-2 text-primary font-label-caps text-label-caps mt-4 hover:translate-x-1 transition-transform"
-                            href="#">
-                            Details <span class="material-symbols-outlined text-[18px]">open_in_new</span>
-                        </a>
-                    </div>
+        </div>
+
+        <div id="tab-content-personal" class="grid md:grid-cols-2 gap-8 transition-all duration-500">
+            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                <div class="h-48 bg-gradient-to-br from-cyan-900 to-black flex items-center justify-center p-6 border-b border-white/10">
+                    <span class="material-symbols-outlined text-6xl text-primary/40">dataset</span>
                 </div>
-                <!-- Project Card 2 -->
-                <div class="glass-card group rounded-xl overflow-hidden glow-hover">
-                    <div class="h-64 overflow-hidden relative">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            data-alt="A macro shot of a complex neural network visualization with glowing fiber optic lines connecting nodes."
-                            src="images/image-02.jpg">
-                        <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
-                    </div>
-                    <div class="p-8 space-y-4">
-                        <div class="flex gap-2">
-                            <span
-                                class="bg-surface-container-highest px-3 py-1 rounded-full font-code-sm text-[10px] text-secondary hover:bg-secondary/10 transition-colors cursor-default">PYTHON</span>
-                            <span
-                                class="bg-surface-container-highest px-3 py-1 rounded-full font-code-sm text-[10px] text-secondary hover:bg-secondary/10 transition-colors cursor-default">TENSORFLOW</span>
-                        </div>
-                        <h3
-                            class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
-                            CORE_AI</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant">
-                            Neural network middleware designed for decentralized computing clusters.
-                        </p>
-                        <a class="inline-flex items-center gap-2 text-primary font-label-caps text-label-caps mt-4 hover:translate-x-1 transition-transform"
-                            href="#">
-                            Details <span class="material-symbols-outlined text-[18px]">open_in_new</span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Project Card 3 -->
-                <div class="glass-card group rounded-xl overflow-hidden glow-hover">
-                    <div class="h-64 overflow-hidden relative">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            data-alt="A top-down view of a high-end gaming setup featuring a custom mechanical keyboard and minimalist hardware."
-                            src="images/image-03.jpg">
-                        <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
-                    </div>
-                    <div class="p-8 space-y-4">
-                        <div class="flex gap-2">
-                            <span
-                                class="bg-surface-container-highest px-3 py-1 rounded-full font-code-sm text-[10px] text-secondary hover:bg-secondary/10 transition-colors cursor-default">NEXT.JS</span>
-                            <span
-                                class="bg-surface-container-highest px-3 py-1 rounded-full font-code-sm text-[10px] text-secondary hover:bg-secondary/10 transition-colors cursor-default">TAILWIND</span>
-                        </div>
-                        <h3
-                            class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
-                            MOD_PORTAL</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant">
-                            A modular design system documentation site for international hardware startups.
-                        </p>
-                        <a class="inline-flex items-center gap-2 text-primary font-label-caps text-label-caps mt-4 hover:translate-x-1 transition-transform"
-                            href="#">
-                            Details <span class="material-symbols-outlined text-[18px]">open_in_new</span>
-                        </a>
-                    </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">DashDConvert Application</h3>
+                    <p class="text-on-surface-variant text-sm mb-4 leading-relaxed">
+                        Aplikasi web universal interaktif yang dibangun menggunakan Next.js dan Tailwind CSS untuk otomatisasi ekstraksi, manipulasi format dataset, serta konversi data statistik secara real-time.
+                    </p>
+                    <a href="https://drive.google.com" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
+                        <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
+                    </a>
                 </div>
             </div>
-        </section>
-        <!-- Technical Expertise (Asymmetric Bento Grid) -->
-        <section
-            class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal-on-scroll active">
-            <h2 class="font-headline-lg text-headline-lg text-on-surface mb-16">Technical_Stack</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
-                <div class="md:col-span-2 glass-card p-8 rounded-xl flex flex-col justify-between glow-hover">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-6">code_blocks</span>
-                    <div>
-                        <h4 class="font-headline-md text-headline-md text-on-surface mb-2">Frontend Architecture</h4>
-                        <p class="text-on-surface-variant">Expertise in React, Vue, and high-performance WebGL
-                            rendering. Focused on pixel-perfect implementations.</p>
-                    </div>
+
+            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                <div class="h-48 bg-gradient-to-br from-indigo-900 to-black flex items-center justify-center p-6 border-b border-white/10">
+                    <span class="material-symbols-outlined text-6xl text-primary/40">favorite</span>
                 </div>
-                <div class="glass-card p-8 rounded-xl flex flex-col items-center justify-center text-center glow-hover">
-                    <span class="text-secondary font-headline-xl text-headline-xl">10+</span>
-                    <p class="font-label-caps text-label-caps">Years of Dev</p>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">Interactive Retro Valentine Platform</h3>
+                    <p class="text-on-surface-variant text-sm mb-4 leading-relaxed">
+                        Proyek creative coding berbasis React dengan antarmuka UI/UX bergaya retro/pixel art, menampilkan animasi dinamis kustom, handling state interaktif, dan penyimpanan memori digital yang responsif.
+                    </p>
+                    <a href="https://drive.google.com" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
+                        <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
+                    </a>
                 </div>
-                <div class="glass-card p-8 rounded-xl flex flex-col items-center justify-center text-center glow-hover">
-                    <span class="text-primary font-headline-xl text-headline-xl">50+</span>
-                    <p class="font-label-caps text-label-caps">Systems Built</p>
-                </div>
-                <div class="glass-card p-8 rounded-xl md:col-span-1 glow-hover">
-                    <h5 class="font-label-caps text-label-caps text-secondary mb-4">Core Tech</h5>
-                    <ul class="space-y-2 font-code-sm text-code-sm">
-                        <li class="flex items-center gap-2 group cursor-default">
-                            <span
-                                class="w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-150 transition-transform"></span>
-                            <span class="group-hover:text-primary transition-colors">TypeScript</span>
-                        </li>
-                        <li class="flex items-center gap-2 group cursor-default">
-                            <span
-                                class="w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-150 transition-transform"></span>
-                            <span class="group-hover:text-primary transition-colors">Node.js</span>
-                        </li>
-                        <li class="flex items-center gap-2 group cursor-default">
-                            <span
-                                class="w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-150 transition-transform"></span>
-                            <span class="group-hover:text-primary transition-colors">PostgreSQL</span>
-                        </li>
-                        <li class="flex items-center gap-2 group cursor-default">
-                            <span
-                                class="w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-150 transition-transform"></span>
-                            <span class="group-hover:text-primary transition-colors">Docker</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="md:col-span-3 glass-card p-8 rounded-xl reveal-on-scroll active">
-                    <div class="flex items-center justify-between mb-6">
-                        <h4 class="font-headline-md text-headline-md text-on-surface">Recent_Activity</h4>
-                        <span class="font-code-sm text-code-sm text-secondary animate-pulse">live_stream</span>
-                    </div>
-                    <div
-                        class="bg-surface-container-lowest rounded p-4 font-code-sm text-code-sm border border-white/5">
-                        <div class="flex gap-4 mb-2 hover:bg-white/5 transition-colors p-1 rounded">
-                            <span class="text-outline">10:45 AM</span>
-                            <span class="text-primary">PUSH</span>
-                            <span class="text-on-surface">feat: implement hardware-accelerated shaders</span>
-                        </div>
-                        <div class="flex gap-4 mb-2 hover:bg-white/5 transition-colors p-1 rounded">
-                            <span class="text-outline">09:12 AM</span>
-                            <span class="text-primary">MERGE</span>
-                            <span class="text-on-surface">fix: resolve memory leak in particle system</span>
-                        </div>
-                        <div class="flex gap-4 hover:bg-white/5 transition-colors p-1 rounded">
-                            <span class="text-outline">08:00 AM</span>
-                            <span class="text-primary">SYNC</span>
-                            <span class="text-on-surface">Initialized deployment to production cluster</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- CTA Section -->
-        <section
-            class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center reveal-on-scroll active">
-            <div class="glass-card p-12 md:p-24 rounded-2xl relative overflow-hidden group">
-                <div
-                    class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-primary group-hover:h-2 transition-all">
-                </div>
-                <h2
-                    class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface mb-8">
-                    Ready to evolve?</h2>
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
-                    Let's discuss how we can build your next high-impact digital product. Open for freelance contracts
-                    and innovative collaborations.
-                </p>
-                <div class="flex flex-col md:flex-row justify-center gap-6">
-                    <button
-                        class="shimmer-btn text-on-primary px-10 py-5 rounded-lg font-label-caps text-label-caps text-lg hover:drop-shadow-[0_0_25px_rgba(219,252,255,0.6)] transition-all active:scale-95">
-                        Initiate Contact
-                    </button>
-                    <button
-                        class="border border-on-surface-variant text-on-surface-variant px-10 py-5 rounded-lg font-label-caps text-label-caps text-lg hover:bg-white/5 transition-all active:scale-95">
-                        Schedule a Call
-                    </button>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!-- Footer -->
-    <footer class="w-full py-12 border-t border-white/5 bg-surface-container-lowest">
-        <div
-            class="flex flex-col md:flex-row justify-between items-center gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="text-center md:text-left">
-                <h2 class="font-headline-md text-headline-md text-on-surface mb-2">DEV_PORTFOLIO</h2>
-                <p class="font-body-md text-body-md text-on-surface-variant uppercase">© 2024 TERMINAL. Free HTML Template by <a href="https://templatesjungle.com/" target="_blank">TemplatesJungle.com</a>.</p>
-            </div>
-            <div class="flex gap-8">
-                <a class="text-on-surface-variant hover:text-secondary hover:translate-y-[-2px] transition-all font-label-caps text-label-caps"
-                    href="#">Source</a>
-                <a class="text-on-surface-variant hover:text-secondary hover:translate-y-[-2px] transition-all font-label-caps text-label-caps"
-                    href="#">LinkedIn</a>
-                <a class="text-on-surface-variant hover:text-secondary hover:translate-y-[-2px] transition-all font-label-caps text-label-caps"
-                    href="#">Twitter</a>
-                <a class="text-on-surface-variant hover:text-secondary hover:translate-y-[-2px] transition-all font-label-caps text-label-caps"
-                    href="#">Discord</a>
             </div>
         </div>
+
+        <div id="tab-content-group" class="grid md:grid-cols-2 gap-8 transition-all duration-500 hidden">
+            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                <div class="h-48 bg-gradient-to-br from-emerald-900 to-black flex items-center justify-center p-6 border-b border-white/10">
+                    <span class="material-symbols-outlined text-6xl text-primary/40">analytics</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">Macroeconomic Volatility & Stock Analysis</h3>
+                    <p class="text-on-surface-variant text-sm mb-4 leading-relaxed">
+                        Kolaborasi riset analisis komparatif model deret waktu ARIMA, SVR, dan GARCH-MIDAS untuk memprediksi volatilitas IHSG serta sinkronisasi data yield spread indikator makroekonomi Indonesia.
+                    </p>
+                    <a href="https://drive.google.com" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
+                        <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
+                    </a>
+                </div>
+            </div>
+
+            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                <div class="h-48 bg-gradient-to-br from-purple-900 to-black flex items-center justify-center p-6 border-b border-white/10">
+                    <span class="material-symbols-outlined text-6xl text-primary/40">monitoring</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">Socio-Economic Poverty Classification</h3>
+                    <p class="text-on-surface-variant text-sm mb-4 leading-relaxed">
+                        Pengembangan framework Machine Learning kelompok membandingkan metode LightGBM dan Random Forest dengan pemodelan statistik tradisional, dilengkapi Explainable AI (XAI) melalui SHAP values.
+                    </p>
+                    <a href="https://drive.google.com" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
+                        <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 px-6 max-w-4xl mx-auto reveal-on-scroll">
+        <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-12">Organizational & Leadership</h2>
+        <div class="space-y-8">
+            <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
+                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-2"></div>
+                <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">Sekarang active</span>
+                <h3 class="text-xl font-bold mt-2">Staff Divisi Desa Binaan</h3>
+                <p class="text-sm text-white/60 mb-2">FMIPA Universitas Negeri Jakarta</p>
+                <p class="text-on-surface-variant text-sm">
+                    Berkontribusi aktif dalam perencanaan dan pelaksanaan program pengabdian masyarakat, mengelola pengolahan data lapangan, serta menggerakkan pemberdayaan sosial di wilayah binaan mahasiswa.
+                </p>
+            </div>
+
+            <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
+                <div class="absolute w-3 h-3 bg-primary/50 rounded-full -left-[7px] top-2"></div>
+                <span class="text-xs font-['JetBrains_Mono'] text-white/40">Former Role</span>
+                <h3 class="text-xl font-bold mt-2">Wakil Ketua Majelis Perwakilan Kelas (MPK)</h3>
+                <p class="text-sm text-white/60 mb-2">SMAN 2 Cileungsi</p>
+                <p class="text-on-surface-variant text-sm">
+                    Memimpin pengawasan program kerja OSIS, memfasilitasi forum aspirasi siswa, serta mengoordinasikan administrasi struktural organisasi internal sekolah.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-white/10 py-8 text-center text-xs text-white/40 font-['JetBrains_Mono']">
+        <p>&copy; 2026 Rahmad Azmy Rizkiyansyah Dalimunthe. Powered by Stats & Code.</p>
     </footer>
-    
-    <div id="mobile-menu-overlay"
-        class="fixed inset-0 z-[60] bg-background/95 backdrop-blur-xl translate-x-full transition-transform duration-500 md:hidden flex flex-col">
-        <div class="flex justify-between items-center h-20 px-margin-mobile">
-            <a class="font-headline-md text-headline-md font-black text-primary tracking-tighter"
-                href="#">WEBDEV</a>
-            <button id="mobile-menu-close" class="p-2 text-on-surface hover:text-primary transition-colors">
+
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-[60] bg-[#121317]/95 backdrop-blur-xl translate-x-full transition-transform duration-500 md:hidden flex flex-col">
+        <div class="flex justify-between items-center h-20 px-6">
+            <a class="font-['Chivo'] text-2xl font-black text-primary tracking-tighter" href="#">RAMS.STATS</a>
+            <button id="mobile-menu-close" class="p-2 text-white">
                 <span class="material-symbols-outlined text-3xl">close</span>
             </button>
         </div>
         <nav class="flex flex-col items-center justify-center flex-grow gap-10">
-            <a class="text-primary text-2xl font-headline-md" href="#">Projects</a>
-            <a class="text-on-surface-variant text-2xl font-headline-md hover:text-primary transition-colors"
-                href="#">Experience</a>
-            <a class="text-on-surface-variant text-2xl font-headline-md hover:text-primary transition-colors"
-                href="#">About</a>
-            <a class="text-on-surface-variant text-2xl font-headline-md hover:text-primary transition-colors"
-                href="#">Contact</a>
-            <button class="shimmer-btn text-on-primary px-10 py-3 rounded-full font-label-caps text-label-caps mt-4">
-                Resume
-            </button>
+            <a class="text-primary text-2xl font-bold" href="#about" onclick="toggleMenu()">About</a>
+            <a class="text-on-surface-variant text-2xl font-bold hover:text-primary" href="#projects" onclick="toggleMenu()">Projects</a>
+            <a class="text-on-surface-variant text-2xl font-bold hover:text-primary" href="#experience" onclick="toggleMenu()">Organization</a>
         </nav>
     </div>
-    <script src="js/script.js"></script>
 </body>
 
 </html>
