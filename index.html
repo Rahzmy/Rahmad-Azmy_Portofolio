@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Rahmad Azmy Rizkiyansyah Dalimunthe - Portfolio</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Chivo:wght=700;900&amp;family=Geist:wght=400;500&amp;family=JetBrains+Mono:wght=500;700&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
@@ -46,7 +47,7 @@
             <div class="hidden md:flex">
                 <a href="#" class="shimmer-btn text-[#00363a] bg-primary px-6 py-2 rounded-full font-bold text-sm tracking-wide">Resume</a>
             </div>
-            <button id="mobile-menu-open" class="md:hidden p-2 text-white">
+            <button id="mobile-menu-open" class="md:hidden p-2 text-white" onclick="toggleMenu()">
                 <span class="material-symbols-outlined text-3xl">menu</span>
             </button>
         </div>
@@ -58,20 +59,20 @@
         </h1>
         <p class="font-['JetBrains_Mono'] text-primary text-md md:text-lg mb-6">Statistics Undergraduate | Data Science Enthusiast</p>
         <p class="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Mahasiswa Statistika Universitas Negeri Jakarta (FMIPA UNJ) dengan IPK 3.82. Fokus pada pemodelan statistika tingkat lanjut, analisis deret waktu, dan implementasi Machine Learning untuk solusi berbasis data.
+            Mahasiswa Statistika Universitas Negeri Jakarta (FMIPA UNJ) dengan IPK 3.82. Fokus pada pemodelan statistika tingkat lanjut, analisis deret waktu, dan pengolahan visualisasi data interaktif untuk pengambilan keputusan.
         </p>
         <div class="flex flex-wrap justify-center gap-3">
+            <span class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-['JetBrains_Mono']">Excel & Power BI</span>
             <span class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-['JetBrains_Mono']">R Programming</span>
             <span class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-['JetBrains_Mono']">Python</span>
-            <span class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-['JetBrains_Mono']">SQL</span>
-            <span class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-['JetBrains_Mono']">Statistical Modeling</span>
+            <span class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-['JetBrains_Mono']">Statistical Analysis</span>
         </div>
     </section>
 
     <section id="projects" class="py-20 px-6 max-w-6xl mx-auto reveal-on-scroll">
         <div class="text-center mb-12">
             <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white mb-4">Featured Projects</h2>
-            <p class="text-on-surface-variant">Aplikasi interaktif dan analisis data yang telah saya kembangkan.</p>
+            <p class="text-on-surface-variant">Aplikasi interaktif, visualisasi dashboard, dan analisis riset data yang telah saya kembangkan.</p>
             
             <div class="flex justify-center gap-4 mt-8">
                 <button onclick="switchTab('personal')" id="tab-btn-personal" class="px-6 py-2 rounded-full font-bold text-sm border transition-all duration-300 bg-primary text-[#00363a] border-primary">
@@ -84,30 +85,46 @@
         </div>
 
         <div id="tab-content-personal" class="grid md:grid-cols-2 gap-8 transition-all duration-500">
-            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5">
-                <div class="h-48 bg-gradient-to-br from-cyan-900 to-black flex items-center justify-center p-6 border-b border-white/10">
-                    <span class="material-symbols-outlined text-6xl text-primary/40">dataset</span>
+            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
+                <div>
+                    <div class="h-48 overflow-hidden bg-gradient-to-br from-emerald-900 to-black border-b border-white/10 relative">
+                        <img src="assets/ecommerce-excel-preview.png" alt="E-commerce Excel Dashboard Preview" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="absolute inset-0 hidden flex-col items-center justify-center p-6 text-center bg-[#1a1b20]">
+                            <span class="material-symbols-outlined text-5xl text-primary/40 mb-2">table_chart</span>
+                            <span class="text-xs text-white/40 font-['JetBrains_Mono']">assets/ecommerce-excel-preview.png</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">E-commerce Excel Dashboard</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Pengembangan dashboard interaktif menggunakan Advanced Excel (Pivot Tables, Power Query, dan Slicers) untuk melacak performa penjualan, margin keuntungan, dan retensi pelanggan pada dataset retail e-commerce.
+                        </p>
+                    </div>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-white mb-2">DashDConvert Application</h3>
-                    <p class="text-on-surface-variant text-sm mb-4 leading-relaxed">
-                        Aplikasi web universal interaktif yang dibangun menggunakan Next.js dan Tailwind CSS untuk otomatisasi ekstraksi, manipulasi format dataset, serta konversi data statistik secara real-time.
-                    </p>
+                <div class="p-6 pt-0">
                     <a href="https://drive.google.com" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
                         <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
                     </a>
                 </div>
             </div>
 
-            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5">
-                <div class="h-48 bg-gradient-to-br from-indigo-900 to-black flex items-center justify-center p-6 border-b border-white/10">
-                    <span class="material-symbols-outlined text-6xl text-primary/40">favorite</span>
+            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
+                <div>
+                    <div class="h-48 overflow-hidden bg-gradient-to-br from-blue-900 to-black border-b border-white/10 relative">
+                        <img src="assets/superstore-powerbi-preview.png" alt="Superstore Power BI Dashboard Preview" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="absolute inset-0 hidden flex-col items-center justify-center p-6 text-center bg-[#1a1b20]">
+                            <span class="material-symbols-outlined text-5xl text-primary/40 mb-2">bar_chart</span>
+                            <span class="text-xs text-white/40 font-['JetBrains_Mono']">assets/superstore-powerbi-preview.png</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Superstore Power BI Dashboard</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Rancang bangun laporan analitik bisnis menggunakan Power BI dengan pemodelan data DAX tingkat lanjut. Menampilkan visualisasi profitabilitas wilayah, tren pengiriman logistik, serta segmentasi konsumen secara dinamis.
+                        </p>
+                    </div>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-white mb-2">Interactive Retro Valentine Platform</h3>
-                    <p class="text-on-surface-variant text-sm mb-4 leading-relaxed">
-                        Proyek creative coding berbasis React dengan antarmuka UI/UX bergaya retro/pixel art, menampilkan animasi dinamis kustom, handling state interaktif, dan penyimpanan memori digital yang responsif.
-                    </p>
+                <div class="p-6 pt-0">
                     <a href="https://drive.google.com" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
                         <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
                     </a>
@@ -116,30 +133,46 @@
         </div>
 
         <div id="tab-content-group" class="grid md:grid-cols-2 gap-8 transition-all duration-500 hidden">
-            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5">
-                <div class="h-48 bg-gradient-to-br from-emerald-900 to-black flex items-center justify-center p-6 border-b border-white/10">
-                    <span class="material-symbols-outlined text-6xl text-primary/40">analytics</span>
+            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
+                <div>
+                    <div class="h-48 overflow-hidden bg-gradient-to-br from-amber-900 to-black border-b border-white/10 relative">
+                        <img src="assets/mini-survey-book-preview.png" alt="Mini Survey Book Preview" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="absolute inset-0 hidden flex-col items-center justify-center p-6 text-center bg-[#1a1b20]">
+                            <span class="material-symbols-outlined text-5xl text-primary/40 mb-2">menu_book</span>
+                            <span class="text-xs text-white/40 font-['JetBrains_Mono']">assets/mini-survey-book-preview.png</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Mini Survey Book</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Proyek kolaborasi riset metodologi survei lapangan yang mencakup penyusunan kuesioner, penentuan teknik sampling probabilitas, pembersihan data (*data cleaning*), hingga pelaporan analisis deskriptif inferensial yang komprehensif.
+                        </p>
+                    </div>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-white mb-2">Macroeconomic Volatility & Stock Analysis</h3>
-                    <p class="text-on-surface-variant text-sm mb-4 leading-relaxed">
-                        Kolaborasi riset analisis komparatif model deret waktu ARIMA, SVR, dan GARCH-MIDAS untuk memprediksi volatilitas IHSG serta sinkronisasi data yield spread indikator makroekonomi Indonesia.
-                    </p>
+                <div class="p-6 pt-0">
                     <a href="https://drive.google.com" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
                         <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
                     </a>
                 </div>
             </div>
 
-            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5">
-                <div class="h-48 bg-gradient-to-br from-purple-900 to-black flex items-center justify-center p-6 border-b border-white/10">
-                    <span class="material-symbols-outlined text-6xl text-primary/40">monitoring</span>
+            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
+                <div>
+                    <div class="h-48 overflow-hidden bg-gradient-to-br from-purple-900 to-black border-b border-white/10 relative">
+                        <img src="assets/r-shiny-preview.png" alt="R Shiny Project Preview" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="absolute inset-0 hidden flex-col items-center justify-center p-6 text-center bg-[#1a1b20]">
+                            <span class="material-symbols-outlined text-5xl text-primary/40 mb-2">terminal</span>
+                            <span class="text-xs text-white/40 font-['JetBrains_Mono']">assets/r-shiny-preview.png</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">R Shiny Project</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Pengembangan aplikasi web berbasis R Shiny untuk automasi komputasi statistik dan pemodelan interaktif. Dilengkapi visualisasi grafik reaktif (ggplot2/plotly) untuk mempermudah interpretasi pengujian hipotesis secara instan.
+                        </p>
+                    </div>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-white mb-2">Socio-Economic Poverty Classification</h3>
-                    <p class="text-on-surface-variant text-sm mb-4 leading-relaxed">
-                        Pengembangan framework Machine Learning kelompok membandingkan metode LightGBM dan Random Forest dengan pemodelan statistik tradisional, dilengkapi Explainable AI (XAI) melalui SHAP values.
-                    </p>
+                <div class="p-6 pt-0">
                     <a href="https://drive.google.com" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
                         <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
                     </a>
@@ -153,7 +186,7 @@
         <div class="space-y-8">
             <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
                 <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-2"></div>
-                <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">Sekarang active</span>
+                <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">Aktif</span>
                 <h3 class="text-xl font-bold mt-2">Staff Divisi Desa Binaan</h3>
                 <p class="text-sm text-white/60 mb-2">FMIPA Universitas Negeri Jakarta</p>
                 <p class="text-on-surface-variant text-sm">
@@ -163,7 +196,7 @@
 
             <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
                 <div class="absolute w-3 h-3 bg-primary/50 rounded-full -left-[7px] top-2"></div>
-                <span class="text-xs font-['JetBrains_Mono'] text-white/40">Former Role</span>
+                <span class="text-xs font-['JetBrains_Mono'] text-white/40">Demisioner</span>
                 <h3 class="text-xl font-bold mt-2">Wakil Ketua Majelis Perwakilan Kelas (MPK)</h3>
                 <p class="text-sm text-white/60 mb-2">SMAN 2 Cileungsi</p>
                 <p class="text-on-surface-variant text-sm">
@@ -180,7 +213,7 @@
     <div id="mobile-menu-overlay" class="fixed inset-0 z-[60] bg-[#121317]/95 backdrop-blur-xl translate-x-full transition-transform duration-500 md:hidden flex flex-col">
         <div class="flex justify-between items-center h-20 px-6">
             <a class="font-['Chivo'] text-2xl font-black text-primary tracking-tighter" href="#">RAMS.STATS</a>
-            <button id="mobile-menu-close" class="p-2 text-white">
+            <button id="mobile-menu-close" class="p-2 text-white" onclick="toggleMenu()">
                 <span class="material-symbols-outlined text-3xl">close</span>
             </button>
         </div>
@@ -190,6 +223,8 @@
             <a class="text-on-surface-variant text-2xl font-bold hover:text-primary" href="#experience" onclick="toggleMenu()">Organization</a>
         </nav>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
