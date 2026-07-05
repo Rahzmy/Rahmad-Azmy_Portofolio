@@ -36,30 +36,39 @@
     <div class="mesh-gradient"></div>
     <div class="scanline-overlay"></div>
 
+    <!-- Header / Navigation -->
     <header class="fixed top-0 left-0 w-full z-50 bg-[#121317]/80 backdrop-blur-md border-b border-white/10">
         <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
             <a class="font-['Chivo'] text-2xl font-black text-primary tracking-tighter" href="#">RAMS.STATS</a>
             <nav class="hidden md:flex gap-8">
                 <a class="text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#education">Education</a>
                 <a class="text-on-surface-variant hover:text-primary transition-colors" href="#projects">Projects</a>
                 <a class="text-on-surface-variant hover:text-primary transition-colors" href="#experience">Organization</a>
             </nav>
             <div class="hidden md:flex">
                 <a href="#" class="shimmer-btn text-[#00363a] bg-primary px-6 py-2 rounded-full font-bold text-sm tracking-wide">Resume</a>
             </div>
-            <button id="mobile-menu-open" class="md:hidden p-2 text-white" onclick="toggleMenu()">
+            <button id="mobile-menu-open" class="md:hidden p-2 text-white">
                 <span class="material-symbols-outlined text-3xl">menu</span>
             </button>
         </div>
     </header>
 
-    <section id="about" class="pt-40 pb-20 px-6 max-w-4xl mx-auto text-center reveal-on-scroll">
+    <!-- About / Hero Section -->
+    <section id="about" class="pt-40 pb-16 px-6 max-w-4xl mx-auto text-center reveal-on-scroll">
+        <div class="inline-block bg-white/5 px-4 py-1.5 border-l-2 border-primary mb-6">
+            <p class="font-['JetBrains_Mono'] text-xs text-primary flex items-center gap-2">
+                <span class="material-symbols-outlined text-[14px]">terminal</span>
+                status: undergraduate_student
+            </p>
+        </div>
         <h1 class="font-['Chivo'] text-4xl md:text-6xl font-black text-white tracking-tight mb-4">
             Hi, I'm <span class="text-primary">Rahmad Azmy Rizkiyansyah D.</span>
         </h1>
         <p class="font-['JetBrains_Mono'] text-primary text-md md:text-lg mb-6">Statistics Undergraduate | Data Science Enthusiast</p>
         <p class="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Mahasiswa Statistika Universitas Negeri Jakarta (FMIPA UNJ) dengan IPK 3.82. Fokus pada pemodelan statistika tingkat lanjut, analisis deret waktu, dan pengolahan visualisasi data interaktif untuk pengambilan keputusan.
+            A statistics student at Universitas Negeri Jakarta with a strong focus on data analysis. Skilled in processing quantitative data, identifying trends, and translating numbers into clear, actionable insights.
         </p>
         <div class="flex flex-wrap justify-center gap-3">
             <span class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-['JetBrains_Mono']">Excel & Power BI</span>
@@ -69,11 +78,43 @@
         </div>
     </section>
 
-    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto reveal-on-scroll">
+    <!-- Education Section -->
+    <section id="education" class="py-16 px-6 max-w-4xl mx-auto reveal-on-scroll">
+        <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-12">Education</h2>
+        <div class="glass-card rounded-2xl border border-white/10 bg-white/5 p-8 glow-hover">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-white/10 pb-6 mb-6">
+                <div>
+                    <h3 class="text-2xl font-bold text-white">Universitas Negeri Jakarta (UNJ)</h3>
+                    <p class="text-primary font-['JetBrains_Mono'] text-sm mt-1">Bachelor's Degree (S1) in Statistics</p>
+                </div>
+                <div class="text-left md:text-right">
+                    <span class="bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-xs font-['JetBrains_Mono']">Sept 2023 - Present</span>
+                    <p class="text-sm text-white/60 mt-2 font-bold">GPA: 3.82 / 4.00</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 text-sm tracking-wider uppercase">Academic Focus & Skills:</h4>
+                <ul class="space-y-2 text-on-surface-variant text-sm">
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                        <span>Advanced statistical modeling, quantitative research data handling, and multivariate analysis.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                        <span>Utilizing programming languages such as R and Python for data manipulation and predictive analytics.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-6 max-w-6xl mx-auto reveal-on-scroll">
         <div class="text-center mb-12">
             <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white mb-4">Featured Projects</h2>
-            <p class="text-on-surface-variant">Aplikasi interaktif, visualisasi dashboard, dan analisis riset data yang telah saya kembangkan.</p>
+            <p class="text-on-surface-variant">Interactive dashboards, interactive applications, and survey analytical works.</p>
             
+            <!-- Tab Controls -->
             <div class="flex justify-center gap-4 mt-8">
                 <button onclick="switchTab('personal')" id="tab-btn-personal" class="px-6 py-2 rounded-full font-bold text-sm border transition-all duration-300 bg-primary text-[#00363a] border-primary">
                     Personal Projects
@@ -84,7 +125,9 @@
             </div>
         </div>
 
+        <!-- Personal Projects Tab Content -->
         <div id="tab-content-personal" class="grid md:grid-cols-2 gap-8 transition-all duration-500">
+            <!-- Personal Project 1 -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-gradient-to-br from-emerald-900 to-black border-b border-white/10 relative">
@@ -97,7 +140,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">E-commerce Excel Dashboard</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Pengembangan dashboard interaktif menggunakan Advanced Excel (Pivot Tables, Power Query, dan Slicers) untuk melacak performa penjualan, margin keuntungan, dan retensi pelanggan pada dataset retail e-commerce.
+                            Developed an interactive data visualization dashboard utilizing Advanced Excel operations, Pivot Tables, Power Query, and dynamic Slicers to track key retail growth metrics, profit margins, and business KPIs.
                         </p>
                     </div>
                 </div>
@@ -108,6 +151,7 @@
                 </div>
             </div>
 
+            <!-- Personal Project 2 -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-gradient-to-br from-blue-900 to-black border-b border-white/10 relative">
@@ -120,7 +164,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">Superstore Power BI Dashboard</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Rancang bangun laporan analitik bisnis menggunakan Power BI dengan pemodelan data DAX tingkat lanjut. Menampilkan visualisasi profitabilitas wilayah, tren pengiriman logistik, serta segmentasi konsumen secara dinamis.
+                            Engineered an interactive business analytics dashboard using Power BI and advanced DAX modeling. Designed responsive layouts representing geographical distribution of product profitability, delivery analytics, and consumer behavior segments.
                         </p>
                     </div>
                 </div>
@@ -132,7 +176,9 @@
             </div>
         </div>
 
+        <!-- Group Projects Tab Content (Hidden by default) -->
         <div id="tab-content-group" class="grid md:grid-cols-2 gap-8 transition-all duration-500 hidden">
+            <!-- Group Project 1 -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-gradient-to-br from-amber-900 to-black border-b border-white/10 relative">
@@ -145,7 +191,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">Mini Survey Book</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Proyek kolaborasi riset metodologi survei lapangan yang mencakup penyusunan kuesioner, penentuan teknik sampling probabilitas, pembersihan data (*data cleaning*), hingga pelaporan analisis deskriptif inferensial yang komprehensif.
+                            A collaborative survey methodology project covering full-cycle quantitative fieldwork, field questionnaire blueprint creation, sample selection using random probability sampling, comprehensive data cleaning, and descriptive reporting.
                         </p>
                     </div>
                 </div>
@@ -156,6 +202,7 @@
                 </div>
             </div>
 
+            <!-- Group Project 2 -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
                     <div class="h-48 overflow-hidden bg-gradient-to-br from-purple-900 to-black border-b border-white/10 relative">
@@ -168,7 +215,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">R Shiny Project</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Pengembangan aplikasi web berbasis R Shiny untuk automasi komputasi statistik dan pemodelan interaktif. Dilengkapi visualisasi grafik reaktif (ggplot2/plotly) untuk mempermudah interpretasi pengujian hipotesis secara instan.
+                            Built a reactive web application structure via R Shiny architecture for automated statistical workflows, integrating data processing with dynamic charting (ggplot2/plotly) to streamline real-time interpretation of hypothesis tests.
                         </p>
                     </div>
                 </div>
@@ -181,46 +228,52 @@
         </div>
     </section>
 
-    <section id="experience" class="py-20 px-6 max-w-4xl mx-auto reveal-on-scroll">
-        <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-12">Organizational & Leadership</h2>
+    <!-- Organizational & Leadership Section -->
+    <section id="experience" class="py-16 px-6 max-w-4xl mx-auto reveal-on-scroll">
+        <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-12">Organizational & Volunteer Experience</h2>
         <div class="space-y-8">
+            <!-- Org 1 -->
             <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
                 <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-2"></div>
-                <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">Aktif</span>
-                <h3 class="text-xl font-bold mt-2">Staff Divisi Desa Binaan</h3>
-                <p class="text-sm text-white/60 mb-2">FMIPA Universitas Negeri Jakarta</p>
-                <p class="text-on-surface-variant text-sm">
-                    Berkontribusi aktif dalam perencanaan dan pelaksanaan program pengabdian masyarakat, mengelola pengolahan data lapangan, serta menggerakkan pemberdayaan sosial di wilayah binaan mahasiswa.
+                <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">July 2024 – July 2025</span>
+                <h3 class="text-xl font-bold mt-2">Desa Binaan FMIPA UNJ — Infrastructure and Logistics Staff</h3>
+                <p class="text-sm text-white/60 mb-2">Universitas Negeri Jakarta</p>
+                <p class="text-on-surface-variant text-sm leading-relaxed">
+                    Fully supported the smooth execution of community service programs, including managing operational logistics as an Event Logistics and Operations Staff for FESCOM 2024, a national-level student competition and festival. Demonstrated quick problem-solving skills and responsiveness in resolving technical and operational challenges on-site.
                 </p>
             </div>
 
+            <!-- Org 2 -->
             <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
                 <div class="absolute w-3 h-3 bg-primary/50 rounded-full -left-[7px] top-2"></div>
-                <span class="text-xs font-['JetBrains_Mono'] text-white/40">Demisioner</span>
-                <h3 class="text-xl font-bold mt-2">Wakil Ketua Majelis Perwakilan Kelas (MPK)</h3>
-                <p class="text-sm text-white/60 mb-2">SMAN 2 Cileungsi</p>
-                <p class="text-on-surface-variant text-sm">
-                    Memimpin pengawasan program kerja OSIS, memfasilitasi forum aspirasi siswa, serta mengoordinasikan administrasi struktural organisasi internal sekolah.
+                <span class="text-xs font-['JetBrains_Mono'] text-white/40">Feb 2022 – Dec 2023</span>
+                <h3 class="text-xl font-bold mt-2">MPK SMA Negeri 2 Cileungsi — Vice Chairman</h3>
+                <p class="text-sm text-white/60 mb-2">High School Representative Council</p>
+                <p class="text-on-surface-variant text-sm leading-relaxed">
+                    Assisted the Chairman of MPK in leading the organization and objectively executing supervision and evaluation functions toward the OSIS work programs. Responsible for gathering, analyzing, and communicating aspirations from hundreds of students to the school management to foster inclusive policies. Coordinated public hearings and assembly sessions, honing negotiation, public communication, and conflict resolution skills.
                 </p>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="border-t border-white/10 py-8 text-center text-xs text-white/40 font-['JetBrains_Mono']">
         <p>&copy; 2026 Rahmad Azmy Rizkiyansyah Dalimunthe. Powered by Stats & Code.</p>
     </footer>
 
+    <!-- Mobile Menu Overlay -->
     <div id="mobile-menu-overlay" class="fixed inset-0 z-[60] bg-[#121317]/95 backdrop-blur-xl translate-x-full transition-transform duration-500 md:hidden flex flex-col">
         <div class="flex justify-between items-center h-20 px-6">
             <a class="font-['Chivo'] text-2xl font-black text-primary tracking-tighter" href="#">RAMS.STATS</a>
-            <button id="mobile-menu-close" class="p-2 text-white" onclick="toggleMenu()">
+            <button id="mobile-menu-close" class="p-2 text-white">
                 <span class="material-symbols-outlined text-3xl">close</span>
             </button>
         </div>
         <nav class="flex flex-col items-center justify-center flex-grow gap-10">
-            <a class="text-primary text-2xl font-bold" href="#about" onclick="toggleMenu()">About</a>
-            <a class="text-on-surface-variant text-2xl font-bold hover:text-primary" href="#projects" onclick="toggleMenu()">Projects</a>
-            <a class="text-on-surface-variant text-2xl font-bold hover:text-primary" href="#experience" onclick="toggleMenu()">Organization</a>
+            <a class="text-primary text-2xl font-bold" href="#about">About</a>
+            <a class="text-on-surface-variant text-2xl font-bold hover:text-primary" href="#education">Education</a>
+            <a class="text-on-surface-variant text-2xl font-bold hover:text-primary" href="#projects">Projects</a>
+            <a class="text-on-surface-variant text-2xl font-bold hover:text-primary" href="#experience">Organization</a>
         </nav>
     </div>
 
