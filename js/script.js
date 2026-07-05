@@ -57,3 +57,29 @@ menuClose.addEventListener('click', toggleMenu);
 menuOverlay.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', toggleMenu);
 });
+
+// Function to handle switching between Personal and Group Projects
+function switchTab(tabType) {
+    const personalContent = document.getElementById('tab-content-personal');
+    const groupContent = document.getElementById('tab-content-group');
+    const personalBtn = document.getElementById('tab-btn-personal');
+    const groupBtn = document.getElementById('tab-btn-group');
+
+    if (tabType === 'personal') {
+        // Show Personal, Hide Group
+        personalContent.classList.remove('hidden');
+        groupContent.classList.add('hidden');
+        
+        // Active Button Style
+        personalBtn.className = "px-6 py-2 rounded-full font-bold text-sm border transition-all duration-300 bg-primary text-[#00363a] border-primary";
+        groupBtn.className = "px-6 py-2 rounded-full font-bold text-sm border transition-all duration-300 bg-transparent text-on-surface-variant border-white/10 hover:border-white/30";
+    } else {
+        // Show Group, Hide Personal
+        personalContent.classList.add('hidden');
+        groupContent.classList.remove('hidden');
+        
+        // Active Button Style
+        groupBtn.className = "px-6 py-2 rounded-full font-bold text-sm border transition-all duration-300 bg-primary text-[#00363a] border-primary";
+        personalBtn.className = "px-6 py-2 rounded-full font-bold text-sm border transition-all duration-300 bg-transparent text-on-surface-variant border-white/10 hover:border-white/30";
+    }
+}
