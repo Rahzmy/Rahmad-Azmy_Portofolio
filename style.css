@@ -34,49 +34,19 @@ body {
     0% {
         transform: scale(1);
     }
-
     100% {
         transform: scale(1.1);
     }
 }
 
-/* Entrance Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-hero {
-    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    opacity: 0;
-}
-
-.delay-1 {
-    animation-delay: 0.1s;
-}
-
-.delay-2 {
-    animation-delay: 0.2s;
-}
-
-.delay-3 {
-    animation-delay: 0.3s;
-}
-
-/* Scroll Reveal */
+/* Scroll Reveal Config */
 .reveal-on-scroll {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(20px);
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Forced active layer so text content won't brick on deployment */
 .reveal-on-scroll.active {
     opacity: 1;
     transform: translateY(0);
@@ -84,25 +54,24 @@ body {
 
 /* Hover Enhancements */
 .glow-hover:hover {
-    box-shadow: 0 0 30px rgba(0, 240, 255, 0.25);
-    border-color: rgba(0, 240, 255, 0.5);
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.15);
+    border-color: rgba(0, 240, 255, 0.3);
     background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-4px) scale(1.01);
+    transform: translateY(-4px);
 }
 
 .glass-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Resume Shimmer */
+/* Resume Shimmer Button Effect */
 @keyframes shimmer {
     0% {
         background-position: -200% 0;
     }
-
     100% {
         background-position: 200% 0;
     }
@@ -112,29 +81,4 @@ body {
     background: linear-gradient(90deg, #00dbe9 0%, #dbfcff 50%, #00dbe9 100%);
     background-size: 200% 100%;
     animation: shimmer 4s infinite linear;
-}
-
-/* Typing Effect (kept as-is but referenced) */
-@keyframes typing {
-    from {
-        width: 0
-    }
-
-    to {
-        width: 100%
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent
-    }
-}
-
-.typing-effect {
-    overflow: hidden;
-    border-right: .15em solid #dbfcff;
-    white-space: nowrap;
-    letter-spacing: .1em;
-    animation: typing 3.5s steps(40, end), blink .75s step-end infinite;
 }
