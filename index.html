@@ -85,14 +85,15 @@
                 </div>
             </div>
 
+            <!-- Profile Photo (Correctly pointed to images/Me.png) -->
             <div class="md:col-span-4 flex justify-center order-1 md:order-2">
                 <div class="relative group w-64 h-64 md:w-72 md:h-72">
                     <div class="absolute inset-0 border border-primary/30 rounded-2xl translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
                     <div class="absolute inset-0 glass-card rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex items-center justify-center">
-                        <img src="images/profile.png" alt="Rahmad Azmy Profile Photo" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="images/Me.png" alt="Rahmad Azmy Profile Photo" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="absolute inset-0 hidden flex flex-col items-center justify-center text-center bg-[#1a1b20]">
                             <span class="font-['Chivo'] text-5xl font-black text-primary/40 tracking-tighter">RA</span>
-                            <span class="text-[10px] text-white/30 font-['JetBrains_Mono'] mt-3">images/profile.png</span>
+                            <span class="text-[10px] text-white/30 font-['JetBrains_Mono'] mt-3">images/Me.png</span>
                         </div>
                     </div>
                 </div>
@@ -184,33 +185,30 @@
     <section id="projects" class="py-16 px-6 max-w-6xl mx-auto reveal-on-scroll active">
         <div class="text-center mb-12">
             <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white mb-4">Featured Projects</h2>
-            <p class="text-on-surface-variant">Interactive dashboards, functional analytical tools, and strategic survey operations.</p>
+            <p class="text-on-surface-variant">Interactive dashboards, experimental statistical systems, and machine learning models.</p>
             
             <div class="flex justify-center gap-4 mt-8">
                 <button onclick="switchTab('personal')" id="tab-btn-personal" class="px-6 py-2 rounded-full font-bold text-sm border transition-all duration-300 bg-primary text-[#00363a] border-primary">
-                    Personal Projects
+                    Personal Projects (4)
                 </button>
                 <button onclick="switchTab('group')" id="tab-btn-group" class="px-6 py-2 rounded-full font-bold text-sm border transition-all duration-300 bg-transparent text-on-surface-variant border-white/10 hover:border-white/30">
-                    Group Projects
+                    Group Projects (4)
                 </button>
             </div>
         </div>
 
-        <!-- Personal Projects Content -->
+        <!-- Personal Projects Content (Corrected to images/ directory paths) -->
         <div id="tab-content-personal" class="grid md:grid-cols-2 gap-8 transition-all duration-500">
+            <!-- P1: Excel Dashboard (Personal1.jpeg) -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
-                    <div class="h-48 overflow-hidden bg-gradient-to-br from-emerald-900 to-black border-b border-white/10 relative">
-                        <img src="images/ecommerce-excel-preview.png" alt="Excel Dashboard" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="absolute inset-0 hidden flex-col items-center justify-center p-6 text-center bg-[#1a1b20]">
-                            <span class="material-symbols-outlined text-5xl text-primary/40 mb-2">table_chart</span>
-                            <span class="text-xs text-white/40 font-['JetBrains_Mono']">images/ecommerce-excel-preview.png</span>
-                        </div>
+                    <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
+                        <img src="images/Personal1.jpeg" alt="E-commerce Excel Dashboard" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">E-commerce Excel Dashboard</h3>
+                        <h3 class="text-xl font-bold text-white mb-2">E-commerce Excel Sales Dashboard</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Developed an interactive data visualization dashboard utilizing Advanced Excel operations, Pivot Tables, Power Query, and dynamic Slicers to track key retail growth metrics, profit margins, and business KPIs.
+                            Advanced operations dashboard detailing metric comparisons, order fulfillment tracking, regional sales summaries, and interactive multi-slicer filtering engines.
                         </p>
                     </div>
                 </div>
@@ -220,19 +218,57 @@
                     </a>
                 </div>
             </div>
+
+            <!-- P2: Power BI Dashboard (Personal 2.png) -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
-                    <div class="h-48 overflow-hidden bg-gradient-to-br from-blue-900 to-black border-b border-white/10 relative">
-                        <img src="images/superstore-powerbi-preview.png" alt="Power BI Dashboard" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="absolute inset-0 hidden flex-col items-center justify-center p-6 text-center bg-[#1a1b20]">
-                            <span class="material-symbols-outlined text-5xl text-primary/40 mb-2">bar_chart</span>
-                            <span class="text-xs text-white/40 font-['JetBrains_Mono']">images/superstore-powerbi-preview.png</span>
-                        </div>
+                    <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
+                        <img src="images/Personal 2.png" alt="Superstore Power BI Dashboard" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Superstore Power BI Dashboard</h3>
+                        <h3 class="text-xl font-bold text-white mb-2">Superstore Executive Sales & Profit Dashboard</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Engineered an interactive business analytics dashboard using Power BI and advanced DAX modeling. Designed responsive layouts representing geographical distribution of product profitability, delivery analytics, and consumer behavior segments.
+                            An enterprise business report engineered with complex DAX measures, detailing year-to-date sales trajectory, margin percentage analytics, log shipping distribution models, and category distributions.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="https://drive.google.com" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
+                        <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
+                    </a>
+                </div>
+            </div>
+
+            <!-- P3: Tableau Dashboard (Personal 3.png) -->
+            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
+                <div>
+                    <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
+                        <img src="images/Personal 3.png" alt="Online Retail Tableau Dashboard" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Online Retail Tableau Dashboard</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Geographical tracking portal showing continuous revenue-by-date forecasting maps, dynamic user profiling clusters, and transaction distributions mapped across global geographic zones.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="https://drive.google.com" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
+                        <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
+                    </a>
+                </div>
+            </div>
+
+            <!-- P4: ML Modeling Regression Tree (Personal 4.png) -->
+            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
+                <div>
+                    <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
+                        <img src="images/Personal 4.png" alt="ML Performance Analysis" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Machine Learning Regression Tree Evaluation</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Performance validation pipelines evaluating Decision Trees against Random Forest architectures using exact error variance metrics (MSE, RMSE, $R^2$, MAE, and MAPE splits).
                         </p>
                     </div>
                 </div>
@@ -244,21 +280,18 @@
             </div>
         </div>
 
-        <!-- Group Projects Content -->
+        <!-- Group Projects Content (Corrected to images/ directory paths) -->
         <div id="tab-content-group" class="grid md:grid-cols-2 gap-8 transition-all duration-500 hidden">
+            <!-- G1: Publikasi Survey (Group 1.jpg) -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
-                    <div class="h-48 overflow-hidden bg-gradient-to-br from-amber-900 to-black border-b border-white/10 relative">
-                        <img src="images/mini-survey-book-preview.png" alt="Mini Survey Book" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="absolute inset-0 hidden flex-col items-center justify-center p-6 text-center bg-[#1a1b20]">
-                            <span class="material-symbols-outlined text-5xl text-primary/40 mb-2">menu_book</span>
-                            <span class="text-xs text-white/40 font-['JetBrains_Mono']">images/mini-survey-book-preview.png</span>
-                        </div>
+                    <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
+                        <img src="images/Group 1.jpg" alt="Buku Publikasi Survei UNJ" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Mini Survey Book</h3>
+                        <h3 class="text-xl font-bold text-white mb-2">Survey Publication Book — Universitas Negeri Jakarta</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed">
-                            A collaborative survey methodology project covering full-cycle quantitative fieldwork, field questionnaire blueprint creation, sample selection using random probability sampling, comprehensive data cleaning, and descriptive reporting.
+                            Rams research compilation: A comprehensive descriptive study and Structural Equation Modeling (SEM) Two-Factor analysis assessing socio-economic status, accessibility, and affordability of clean water in Matraman.
                         </p>
                     </div>
                 </div>
@@ -268,19 +301,57 @@
                     </a>
                 </div>
             </div>
+
+            <!-- G2: R Shiny Application Time Series (Group 2.png) -->
             <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
                 <div>
-                    <div class="h-48 overflow-hidden bg-gradient-to-br from-purple-900 to-black border-b border-white/10 relative">
-                        <img src="images/r-shiny-preview.png" alt="R Shiny Project" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="absolute inset-0 hidden flex-col items-center justify-center p-6 text-center bg-[#1a1b20]">
-                            <span class="material-symbols-outlined text-5xl text-primary/40 mb-2">terminal</span>
-                            <span class="text-xs text-white/40 font-['JetBrains_Mono']">images/r-shiny-preview.png</span>
-                        </div>
+                    <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
+                        <img src="images/Group 2.png" alt="R Shiny Forecasting Application" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">R Shiny Project</h3>
+                        <h3 class="text-xl font-bold text-white mb-2">R Shiny Reactive Time Series Smoothing Portal</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Built a reactive web application structure via R Shiny architecture for automated statistical workflows, integrating data processing with dynamic charting (ggplot2/plotly) to streamline real-time interpretation of hypothesis tests.
+                            An interactive web portal automating time-series modeling parameters, featuring structural configurations for Holt-Winters Additive/Multiplicative variants, Simple Exponential Smoothing (SES), and rolling forecasting metrics.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="https://drive.google.com" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
+                        <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
+                    </a>
+                </div>
+            </div>
+
+            <!-- G3: Regression Tree (Group 3.png) -->
+            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
+                <div>
+                    <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
+                        <img src="images/Group 3.png" alt="Group Tree Modeling Statistics" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Advanced Predictive Tree Architecture Comparison</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Collaborative predictive pipeline testing algorithms (Decision Trees, Random Forests, Gradient Boosting, XGBoost) against test matrices to evaluate residual distributions and baseline metrics.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="https://drive.google.com" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
+                        <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
+                    </a>
+                </div>
+            </div>
+
+            <!-- G4: Infografis (Group 4.png) -->
+            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
+                <div>
+                    <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
+                        <img src="images/Group 4.png" alt="Demographic Infographics Poster" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Demographic Infographics: Technology & Digital Economy</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Data advocacy dashboard charting internet consumption trends, digital literacy distribution splits, and analytical solutions targeting Indonesia's demographic bonus.
                         </p>
                     </div>
                 </div>
@@ -311,7 +382,7 @@
             <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
                 <div class="absolute w-3 h-3 bg-primary/50 rounded-full -left-[7px] top-2"></div>
                 <span class="text-xs font-['JetBrains_Mono'] text-white/40">Feb 2022 – Dec 2023</span>
-                <h3 class="text-xl font-bold mt-2">Majelis Perwakilan Kelas SMA Negeri 2 Cilengsi</h3>
+                <h3 class="text-xl font-bold mt-2">Majelis Perwakilan Kelas SMA Negeri 2 Cileungsi</h3>
                 <p class="text-sm text-white/60 mb-3">Vice Chairman</p>
                 <ol class="space-y-2 text-on-surface-variant text-sm list-decimal pl-4">
                     <li>Assisted the Chairman in leading the student parliamentary body while executing objective monitoring and evaluation functions regarding the effectiveness of Student Council (OSIS) work programs.</li>
