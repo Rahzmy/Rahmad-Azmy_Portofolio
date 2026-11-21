@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html class="dark scroll-smooth" lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Rahmad Azmy Rizkiyansyah Dalimunthe - Data Analyst Portfolio</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght=700;900&family=Geist:wght=400;500&family=JetBrains+Mono:wght=500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
-    <script id="tailwind-config">
+    <title>Rahmad Azmy — Data Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
-                    "colors": {
-                        "surface-container-highest": "#343439",
-                        "on-primary": "#00363a",
-                        "surface-variant": "#343439",
-                        "inverse-surface": "#e3e2e8",
-                        "on-background": "#e3e2e8",
-                        "primary": "#dbfcff",
-                        "error-container": "#93000a",
-                        "on-secondary-container": "#32353a",
-                        "on-surface-variant": "#c7c5d0"
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        bg: "#0a0a0a",
+                        surface: "#121212",
+                        border: "#262626",
+                        muted: "#a3a3a3",
+                        accent: "#e5e5e5"
                     }
                 }
             }
@@ -32,470 +32,534 @@
     </script>
 </head>
 
-<body class="bg-[#121317] text-white overflow-x-hidden font-['Geist']">
-    <div class="mesh-gradient"></div>
-    <div class="scanline-overlay"></div>
+<body class="bg-bg text-neutral-100 font-sans antialiased selection:bg-white selection:text-black">
 
-    <!-- Header / Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-[#121317]/80 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a class="font-['Chivo'] text-2xl font-black text-primary tracking-tighter" href="#">MY.PORTFOLIO</a>
-            <nav class="hidden md:flex gap-4 lg:gap-6">
-                <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#about">About</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#education">Education</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#certificates">Certificates</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#projects">Projects</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#organizations">Organizations</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#volunteering">Volunteering</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#contact">Contact</a>
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-bg/90 backdrop-blur-sm border-b border-border">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex justify-between items-center">
+            <a href="#home" class="font-bold text-lg tracking-tight text-white">
+                rahmadazmy<span class="text-neutral-500">.</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm text-muted">
+                <a href="#home" class="hover:text-white transition-colors">Home</a>
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="#experience" class="hover:text-white transition-colors">Others</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
             </nav>
-            <div class="hidden md:flex">
-    <a href="images/CV_ATS_Rahmad_Azmy_Updated_v3.pdf" download="CV_Rahmad_Azmy_Data_Analyst.pdf" class="shimmer-btn text-[#00363a] bg-primary px-6 py-2 rounded-full font-bold text-sm tracking-wide transition-all hover:opacity-90">Resume</a>
+
+            <div class="hidden md:block">
+                <a href="images/CV_ATS_Rahmad_Azmy_Updated_v3.pdf" download="CV_Rahmad_Azmy_Data_Analyst.pdf" 
+                   class="text-xs font-mono border border-neutral-700 hover:border-white hover:bg-white hover:text-black px-4 py-2 rounded transition-all">
+                    CV ↗
+                </a>
             </div>
-            <button id="mobile-menu-open" class="md:hidden p-2 text-white" onclick="toggleMenu()">
-                <span class="material-symbols-outlined text-3xl">menu</span>
+
+            <button id="mobile-menu-btn" class="md:hidden text-neutral-300 hover:text-white p-1" aria-label="Toggle Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
             </button>
         </div>
     </header>
 
-    <!-- About / Hero Section -->
-    <section id="about" class="pt-40 pb-16 px-6 max-w-6xl mx-auto reveal-on-scroll active">
-        <div class="grid md:grid-cols-12 gap-8 items-center">
-            <div class="md:col-span-8 text-left space-y-6 order-2 md:order-1">
-                <div class="inline-block bg-white/5 px-4 py-1.5 border-l-2 border-primary">
-                    <p class="font-['JetBrains_Mono'] text-xs text-primary flex items-center gap-2">
-                        <span class="material-symbols-outlined text-[14px]">terminal</span>
-                        status: seeking_data_analyst_internship
-                    </p>
-                </div>
-                <h1 class="font-['Chivo'] text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
-                    Hi, I'm <span class="text-primary">Rahmad Azmy Rizkiyansyah D.</span>
-                </h1>
-                <p class="font-['JetBrains_Mono'] text-primary text-md md:text-lg">Statistics Undergraduate | Data Analyst</p>
-                <p class="text-on-surface-variant text-base md:text-lg leading-relaxed max-w-3xl">
-                    A statistics student at Universitas Negeri Jakarta with a strong focus on Data Analytics. I specialize in data wrangling, statistical modeling, and data storytelling. Passionate about translating complex numbers into clear, actionable business insights using modern visualization tools.
-                </p>
-                
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-xs font-['JetBrains_Mono'] text-white/80">SQL</span>
-                    <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-xs font-['JetBrains_Mono'] text-white/80">Python & R</span>
-                    <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-xs font-['JetBrains_Mono'] text-white/80">Power BI & Tableau</span>
-                    <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-xs font-['JetBrains_Mono'] text-white/80">Advanced Excel</span>
-                    <span class="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-xs font-['JetBrains_Mono'] text-white/80">Statistical Modeling (SPSS & Minitab)</span>
-                </div>
-            </div>
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-bg hidden flex-col justify-center items-center gap-6 text-lg">
+        <a href="#home" class="mobile-link text-neutral-300 hover:text-white">Home</a>
+        <a href="#about" class="mobile-link text-neutral-300 hover:text-white">About</a>
+        <a href="#projects" class="mobile-link text-neutral-300 hover:text-white">Projects</a>
+        <a href="#experience" class="mobile-link text-neutral-300 hover:text-white">Others</a>
+        <a href="#contact" class="mobile-link text-neutral-300 hover:text-white">Contact</a>
+        <a href="images/CV_ATS_Rahmad_Azmy_Updated_v3.pdf" download="CV_Rahmad_Azmy_Data_Analyst.pdf" 
+           class="mt-4 text-sm font-mono border border-neutral-700 px-6 py-2.5 rounded">
+            Download CV ↗
+        </a>
+    </div>
 
-            <!-- Profile Photo -->
-            <div class="md:col-span-4 flex justify-center order-1 md:order-2">
-                <div class="relative group w-64 h-64 md:w-72 md:h-72">
-                    <div class="absolute inset-0 border border-primary/30 rounded-2xl translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
-                    <div class="absolute inset-0 glass-card rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex items-center justify-center">
-                        <img src="images/Me.png" alt="Rahmad Azmy Profile Photo" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="absolute inset-0 hidden flex flex-col items-center justify-center text-center bg-[#1a1b20]">
-                            <span class="font-['Chivo'] text-5xl font-black text-primary/40 tracking-tighter">RA</span>
-                            <span class="text-[10px] text-white/30 font-['JetBrains_Mono'] mt-3">images/Me.png</span>
+    <main class="max-w-5xl mx-auto px-6">
+
+        <!-- Hero Section -->
+        <section id="home" class="min-h-[85vh] flex flex-col justify-center pt-24 pb-16 border-b border-border">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-8 space-y-6">
+                    <p class="font-mono text-xs text-muted uppercase tracking-widest">
+                        Statistics Undergraduate &bull; Jakarta, ID
+                    </p>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
+                        Data Analyst <span class="text-neutral-500">|</span><br>
+                        Statistical Modeler
+                    </h1>
+                    <p class="text-muted text-base sm:text-lg leading-relaxed max-w-2xl">
+                        I'm <strong class="text-white font-medium">Rahmad Azmy Rizkiyansyah Dalimunthe</strong>, a Statistics student at Universitas Negeri Jakarta. I work with SQL, Python, R, and BI tools to clean messy datasets, build forecasting models, and present clear findings for decision-making.
+                    </p>
+
+                    <!-- Minimalist Social & Action Bar -->
+                    <div class="flex flex-wrap items-center gap-5 pt-2">
+                        <a href="#projects" class="bg-white text-black font-semibold text-sm px-5 py-2.5 rounded hover:bg-neutral-200 transition-colors">
+                            View Projects
+                        </a>
+                        <a href="https://www.linkedin.com/in/rahmad-azmy-rizkiyansyah-dalimunthe" target="_blank" rel="noopener noreferrer" 
+                           class="text-sm font-mono text-muted hover:text-white transition-colors">
+                            LinkedIn ↗
+                        </a>
+                        <a href="mailto:raahmadazmyr@gmail.com" 
+                           class="text-sm font-mono text-muted hover:text-white transition-colors">
+                            Email ↗
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Clean Profile Portrait -->
+                <div class="md:col-span-4 flex justify-start md:justify-end">
+                    <div class="w-56 h-64 sm:w-64 sm:h-72 bg-surface border border-border rounded-lg overflow-hidden relative">
+                        <img src="images/Me.png" alt="Rahmad Azmy" 
+                             class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden w-full h-full flex-col items-center justify-center text-neutral-600 font-mono text-sm">
+                            <span>RA</span>
+                            <span class="text-xs mt-1">images/Me.png</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Education Section -->
-    <section id="education" class="py-16 px-6 max-w-4xl mx-auto reveal-on-scroll active">
-        <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-12">Education</h2>
-        <div class="space-y-6">
-            <div class="glass-card rounded-2xl border border-white/10 bg-white/5 p-8 glow-hover">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-white/10 pb-6 mb-6">
+        <!-- About, Skills & Education -->
+        <section id="about" class="py-20 border-b border-border">
+            <div class="grid md:grid-cols-12 gap-12">
+                <div class="md:col-span-4">
+                    <h2 class="text-2xl font-bold text-white tracking-tight">About & Education</h2>
+                    <p class="text-sm text-muted mt-2">Academic background and core analytical stack.</p>
+                </div>
+
+                <div class="md:col-span-8 space-y-12">
+                    <!-- Tech Stack -->
                     <div>
-                        <h3 class="text-2xl font-bold text-white">Universitas Negeri Jakarta (UNJ)</h3>
-                        <p class="text-primary font-['JetBrains_Mono'] text-sm mt-1">Bachelor's Degree (S1) in Statistics</p>
+                        <h3 class="font-mono text-xs uppercase tracking-wider text-muted mb-4">Technical Stack</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-surface border border-border rounded text-xs font-mono text-neutral-300">SQL</span>
+                            <span class="px-3 py-1.5 bg-surface border border-border rounded text-xs font-mono text-neutral-300">Python (Pandas, Scikit-Learn)</span>
+                            <span class="px-3 py-1.5 bg-surface border border-border rounded text-xs font-mono text-neutral-300">R / R Shiny</span>
+                            <span class="px-3 py-1.5 bg-surface border border-border rounded text-xs font-mono text-neutral-300">Power BI</span>
+                            <span class="px-3 py-1.5 bg-surface border border-border rounded text-xs font-mono text-neutral-300">Tableau</span>
+                            <span class="px-3 py-1.5 bg-surface border border-border rounded text-xs font-mono text-neutral-300">Microsoft Excel</span>
+                            <span class="px-3 py-1.5 bg-surface border border-border rounded text-xs font-mono text-neutral-300">SPSS & Minitab</span>
+                        </div>
                     </div>
-                    <div class="text-left md:text-right">
-                        <span class="bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-xs font-['JetBrains_Mono']">Sept 2023 - Present</span>
-                        <p class="text-sm text-white/60 mt-2 font-bold">GPA: 3.82 / 4.00</p>
+
+                    <!-- Education List -->
+                    <div class="space-y-6">
+                        <h3 class="font-mono text-xs uppercase tracking-wider text-muted">Education</h3>
+                        
+                        <div class="border-l border-neutral-700 pl-5 space-y-1">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                                <h4 class="font-semibold text-white">Universitas Negeri Jakarta (UNJ)</h4>
+                                <span class="font-mono text-xs text-muted">Sept 2023 – Present</span>
+                            </div>
+                            <p class="text-sm text-neutral-300">Bachelor's Degree (S1) in Statistics &bull; GPA: 3.82 / 4.00</p>
+                            <p class="text-sm text-muted pt-1">
+                                Coursework and research focused on time series forecasting, statistical modeling, and exploratory data analysis.
+                            </p>
+                        </div>
+
+                        <div class="border-l border-neutral-800 pl-5 space-y-1">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                                <h4 class="font-semibold text-white">SMAN 2 Cileungsi</h4>
+                                <span class="font-mono text-xs text-muted">May 2020 – May 2023</span>
+                            </div>
+                            <p class="text-sm text-neutral-400">Mathematics & Natural Sciences (MIPA) &bull; Final Score: 87.97 / 100</p>
+                        </div>
                     </div>
                 </div>
-                <ul class="space-y-2 text-on-surface-variant text-sm">
-                    <li class="flex items-start gap-2">
-                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
-                        <span>Focus on advanced statistical analysis, time series forecasting, and exploratory data analysis (EDA).</span>
-                    </li>
-                </ul>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 border-b border-border">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
+                <div>
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Selected Projects</h2>
+                    <p class="text-sm text-muted mt-1">Dashboards, statistical modeling, and collaborative research.</p>
+                </div>
+
+                <!-- Minimal Filter Tabs -->
+                <div class="inline-flex bg-surface border border-border p-1 rounded-md">
+                    <button onclick="switchTab('personal')" id="tab-personal" 
+                            class="px-4 py-1.5 text-xs font-mono rounded bg-white text-black font-medium transition-colors">
+                        Personal (4)
+                    </button>
+                    <button onclick="switchTab('group')" id="tab-group" 
+                            class="px-4 py-1.5 text-xs font-mono rounded text-muted hover:text-white transition-colors">
+                        Group (4)
+                    </button>
+                </div>
             </div>
 
-            <div class="glass-card rounded-2xl border border-white/10 bg-white/5 p-8 glow-hover">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <!-- Personal Projects Grid -->
+            <div id="grid-personal" class="grid md:grid-cols-2 gap-6">
+                <!-- P1 -->
+                <article class="bg-surface border border-border rounded-lg overflow-hidden flex flex-col justify-between hover:border-neutral-600 transition-colors">
                     <div>
-                        <h3 class="text-xl font-bold text-white">SMAN 2 Cileungsi</h3>
-                        <p class="text-white/60 font-['JetBrains_Mono'] text-xs mt-1">Science Major (MIPA)</p>
+                        <div class="aspect-video bg-neutral-900 border-b border-border overflow-hidden">
+                            <img src="images/Personal1.jpeg" alt="E-commerce Excel Sales Dashboard" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <span class="font-mono text-[11px] text-muted">EXCEL / BI</span>
+                                <a href="https://drive.google.com/drive/folders/1vEXBorkRCy6aG-iWs8xOzvqeqRcK5qjf?usp=sharing" target="_blank" class="font-mono text-xs text-white hover:underline">Drive ↗</a>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">E-commerce Excel Sales Dashboard</h3>
+                            <p class="text-sm text-muted leading-relaxed">
+                                Operations dashboard tracking order fulfillment, regional sales comparisons, and interactive slicer filtering for monthly performance reviews.
+                            </p>
+                        </div>
                     </div>
-                    <div class="text-left md:text-right">
-                        <span class="bg-white/5 text-white/60 border border-white/10 px-3 py-1 rounded-full text-xs font-['JetBrains_Mono']">May 2020 - May 2023</span>
-                        <p class="text-xs text-white/40 mt-2">Final Score: 87.97 / 100</p>
+                </article>
+
+                <!-- P2 -->
+                <article class="bg-surface border border-border rounded-lg overflow-hidden flex flex-col justify-between hover:border-neutral-600 transition-colors">
+                    <div>
+                        <div class="aspect-video bg-neutral-900 border-b border-border overflow-hidden">
+                            <img src="images/Personal 2.png" alt="Superstore Power BI Dashboard" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <span class="font-mono text-[11px] text-muted">POWER BI / DAX</span>
+                                <a href="https://drive.google.com/drive/folders/1OY6IK4l-44alRaPyvLjbrV6M_h1PZoGI?usp=sharing" target="_blank" class="font-mono text-xs text-white hover:underline">Drive ↗</a>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Superstore Sales & Profit Report</h3>
+                            <p class="text-sm text-muted leading-relaxed">
+                                Multi-page Power BI report built with custom DAX measures to monitor year-to-date revenue, profit margins, and shipping mode efficiency.
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </article>
 
-    <!-- Course Certificates Section -->
-    <section id="certificates" class="py-16 px-6 max-w-5xl mx-auto reveal-on-scroll active">
-        <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-12">Course Certificates</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex gap-4 glow-hover">
-                <span class="material-symbols-outlined text-primary text-3xl">analytics</span>
-                <div>
-                    <h3 class="font-bold text-lg text-white">Data Scientist Supervisor</h3>
-                    <p class="text-sm text-white/60">Digital Talent Scholarship &bull; Issued Jul 2026</p>
-                    <p class="text-xs text-white/40 font-['JetBrains_Mono'] mt-1">ID: 21211994840-1693</p>
-                    <p class="text-xs font-['JetBrains_Mono'] text-primary/80 mt-2">Skills: Python, Exploratory Data Analysis (EDA)</p>
-                </div>
-            </div>
-            <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex gap-4 glow-hover">
-                <span class="material-symbols-outlined text-primary text-3xl">monitoring</span>
-                <div>
-                    <h3 class="font-bold text-lg text-white">Associate Data Scientist</h3>
-                    <p class="text-sm text-white/60">Digital Talent Scholarship &bull; Issued Jun 2026</p>
-                    <p class="text-xs text-white/40 font-['JetBrains_Mono'] mt-1">ID: 21211993840-6628</p>
-                    <p class="text-xs font-['JetBrains_Mono'] text-primary/80 mt-2">Skills: Python (Programming Language)</p>
-                </div>
-            </div>
-            <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex gap-4 glow-hover">
-                <span class="material-symbols-outlined text-primary text-3xl">psychology</span>
-                <div>
-                    <h3 class="font-bold text-lg text-white">Belajar Machine Learning untuk Pemula</h3>
-                    <p class="text-sm text-white/60">Dicoding Indonesia &bull; Issued Jun 2026</p>
-                    <p class="text-xs text-white/40 font-['JetBrains_Mono'] mt-1">ID: 6RPN75504X2M</p>
-                    <p class="text-xs font-['JetBrains_Mono'] text-primary/80 mt-2">Skills: Python, Predictive Data Modeling</p>
-                </div>
-            </div>
-            <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex gap-4 glow-hover">
-                <span class="material-symbols-outlined text-primary text-3xl">table_rows</span>
-                <div>
-                    <h3 class="font-bold text-lg text-white">Intensive Bootcamp 3 Weeks - Microsoft Excel</h3>
-                    <p class="text-sm text-white/60">KarirNex &bull; Issued Jun 2026</p>
-                    <p class="text-xs font-['JetBrains_Mono'] text-primary/80 mt-2">Skills: Advanced Microsoft Excel</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                <!-- P3 -->
+                <article class="bg-surface border border-border rounded-lg overflow-hidden flex flex-col justify-between hover:border-neutral-600 transition-colors">
+                    <div>
+                        <div class="aspect-video bg-neutral-900 border-b border-border overflow-hidden">
+                            <img src="images/Personal 3.png" alt="Online Retail Tableau Dashboard" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <span class="font-mono text-[11px] text-muted">TABLEAU</span>
+                                <a href="https://drive.google.com/drive/folders/1y15mlEUklzq7rBl48ALjA9CAIOl9HNw7?usp=sharing" target="_blank" class="font-mono text-xs text-white hover:underline">Drive ↗</a>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Online Retail Geographic Dashboard</h3>
+                            <p class="text-sm text-muted leading-relaxed">
+                                Interactive Tableau workbook mapping global revenue distribution, customer cohort behavior, and seasonal transaction volume.
+                            </p>
+                        </div>
+                    </div>
+                </article>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 px-6 max-w-6xl mx-auto reveal-on-scroll active">
-        <div class="text-center mb-12">
-            <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white mb-4">Data Analytics Projects</h2>
-            <p class="text-on-surface-variant">Interactive dashboards, business intelligence reporting, and statistical modeling systems.</p>
+                <!-- P4 -->
+                <article class="bg-surface border border-border rounded-lg overflow-hidden flex flex-col justify-between hover:border-neutral-600 transition-colors">
+                    <div>
+                        <div class="aspect-video bg-neutral-900 border-b border-border overflow-hidden">
+                            <img src="images/Personal 4.png" alt="Machine Learning Regression Tree Evaluation" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <span class="font-mono text-[11px] text-muted">PYTHON / ML</span>
+                                <a href="https://drive.google.com/drive/folders/1VPaOu-no99ez54fnnIF1S8busxWgTCZ5?usp=sharing" target="_blank" class="font-mono text-xs text-white hover:underline">Drive ↗</a>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Regression Tree Model Evaluation</h3>
+                            <p class="text-sm text-muted leading-relaxed">
+                                Comparative benchmark of Decision Tree and Random Forest regressors evaluated across MSE, RMSE, MAE, MAPE, and R-squared metrics.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="md:col-span-2 pt-2">
+                    <a href="https://drive.google.com/drive/folders/1Lcs5vqwPq9Fx4NQWgniwlDLCCXrjmFh2?usp=sharing" target="_blank" 
+                       class="inline-block font-mono text-xs text-muted hover:text-white border-b border-neutral-700 hover:border-white pb-1 transition-colors">
+                        Browse all personal projects in Google Drive ↗
+                    </a>
+                </div>
+            </div>
+
+            <!-- Group Projects Grid -->
+            <div id="grid-group" class="grid md:grid-cols-2 gap-6 hidden">
+                <!-- G1 -->
+                <article class="bg-surface border border-border rounded-lg overflow-hidden flex flex-col justify-between hover:border-neutral-600 transition-colors">
+                    <div>
+                        <div class="aspect-video bg-neutral-900 border-b border-border overflow-hidden">
+                            <img src="images/Group 1.jpg" alt="Survey Publication Book" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <span class="font-mono text-[11px] text-muted">SEM / SURVEY RESEARCH</span>
+                                <a href="https://drive.google.com/drive/folders/1qNYclHyksabWeqF8UPPwpYQbtY6KVutJ?usp=sharing" target="_blank" class="font-mono text-xs text-white hover:underline">Drive ↗</a>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Clean Water Accessibility Survey Book (UNJ)</h3>
+                            <p class="text-sm text-muted leading-relaxed">
+                                Two-Factor Structural Equation Modeling (SEM) and descriptive study analyzing socio-economic factors and clean water affordability in Matraman.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- G2 -->
+                <article class="bg-surface border border-border rounded-lg overflow-hidden flex flex-col justify-between hover:border-neutral-600 transition-colors">
+                    <div>
+                        <div class="aspect-video bg-neutral-900 border-b border-border overflow-hidden">
+                            <img src="images/Group 2.png" alt="R Shiny Time Series Application" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <span class="font-mono text-[11px] text-muted">R SHINY / WEB APP</span>
+                                <a href="https://appdewabykelompok2stat23unj.shinyapps.io/APPDEWAbyKelompok2Stat23UNJ/" target="_blank" class="font-mono text-xs text-white hover:underline">Live App ↗</a>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Time Series Smoothing Web Portal</h3>
+                            <p class="text-sm text-muted leading-relaxed">
+                                Interactive R Shiny application for configuring Simple Exponential Smoothing (SES) and Holt-Winters additive/multiplicative forecasting models.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- G3 -->
+                <article class="bg-surface border border-border rounded-lg overflow-hidden flex flex-col justify-between hover:border-neutral-600 transition-colors">
+                    <div>
+                        <div class="aspect-video bg-neutral-900 border-b border-border overflow-hidden">
+                            <img src="images/Group 3.png" alt="Predictive Tree Architecture Comparison" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <span class="font-mono text-[11px] text-muted">ENSEMBLE MODELS</span>
+                                <a href="https://drive.google.com/drive/folders/1GI8QdusX7AFkXk_MebkBGqZ4UtzIgQdl?usp=sharing" target="_blank" class="font-mono text-xs text-white hover:underline">Drive ↗</a>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Tree-Based Ensemble Comparison</h3>
+                            <p class="text-sm text-muted leading-relaxed">
+                                Benchmark testing Decision Trees, Random Forests, Gradient Boosting, and XGBoost on residual distributions and out-of-sample error rates.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- G4 -->
+                <article class="bg-surface border border-border rounded-lg overflow-hidden flex flex-col justify-between hover:border-neutral-600 transition-colors">
+                    <div>
+                        <div class="aspect-video bg-neutral-900 border-b border-border overflow-hidden">
+                            <img src="images/Group 4.png" alt="Demographic Infographics" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <span class="font-mono text-[11px] text-muted">DATA VISUALIZATION</span>
+                                <a href="https://drive.google.com/drive/folders/1JqUKsNZcQLiwXqHCXGGzRT-rThqZ-iYS?usp=sharing" target="_blank" class="font-mono text-xs text-white hover:underline">Drive ↗</a>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Digital Economy & Demographic Infographics</h3>
+                            <p class="text-sm text-muted leading-relaxed">
+                                Visual report illustrating internet penetration, digital literacy gaps, and demographic dividend indicators across Indonesia.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="md:col-span-2 pt-2">
+                    <a href="https://drive.google.com/drive/folders/1nWEDICeN3C7dwmGTalpVqipbH_SiIDiW?usp=sharing" target="_blank" 
+                       class="inline-block font-mono text-xs text-muted hover:text-white border-b border-neutral-700 hover:border-white pb-1 transition-colors">
+                        Browse all group projects in Google Drive ↗
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates, Organizations & Volunteering ("Others" section style) -->
+        <section id="experience" class="py-20 border-b border-border space-y-20">
             
-            <div class="flex justify-center gap-4 mt-8">
-                <button onclick="switchTab('personal')" id="tab-btn-personal" class="px-6 py-2 rounded-full font-bold text-sm border transition-all duration-300 bg-primary text-[#00363a] border-primary">
-                    Personal Projects (4)
-                </button>
-                <button onclick="switchTab('group')" id="tab-btn-group" class="px-6 py-2 rounded-full font-bold text-sm border transition-all duration-300 bg-transparent text-on-surface-variant border-white/10 hover:border-white/30">
-                    Group Projects (4)
-                </button>
-            </div>
-        </div>
-
-        <!-- Personal Projects Content -->
-        <div id="tab-content-personal" class="grid md:grid-cols-2 gap-8 transition-all duration-500">
-            <!-- P1: Excel Dashboard -->
-            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
-                        <img src="images/Personal1.jpeg" alt="E-commerce Excel Dashboard" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
+            <!-- Certifications -->
+            <div class="grid md:grid-cols-12 gap-8">
+                <div class="md:col-span-4">
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Certifications</h2>
+                    <p class="text-sm text-muted mt-1">Verified training and credentials.</p>
+                </div>
+                <div class="md:col-span-8 divide-y divide-border border-t border-b border-border">
+                    <div class="py-4 flex flex-col sm:flex-row sm:justify-between gap-1">
+                        <div>
+                            <h3 class="font-medium text-white text-sm">Data Scientist Supervisor</h3>
+                            <p class="text-xs text-muted">Digital Talent Scholarship &bull; ID: 21211994840-1693</p>
+                        </div>
+                        <span class="font-mono text-xs text-muted">Jul 2026</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">E-commerce Excel Sales Dashboard</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Advanced operations dashboard built in Excel detailing metric comparisons, order fulfillment tracking, regional sales summaries, and interactive multi-slicer filtering engines for rapid insight generation.
-                        </p>
+                    <div class="py-4 flex flex-col sm:flex-row sm:justify-between gap-1">
+                        <div>
+                            <h3 class="font-medium text-white text-sm">Associate Data Scientist</h3>
+                            <p class="text-xs text-muted">Digital Talent Scholarship &bull; ID: 21211993840-6628</p>
+                        </div>
+                        <span class="font-mono text-xs text-muted">Jun 2026</span>
+                    </div>
+                    <div class="py-4 flex flex-col sm:flex-row sm:justify-between gap-1">
+                        <div>
+                            <h3 class="font-medium text-white text-sm">Belajar Machine Learning untuk Pemula</h3>
+                            <p class="text-xs text-muted">Dicoding Indonesia &bull; ID: 6RPN75504X2M</p>
+                        </div>
+                        <span class="font-mono text-xs text-muted">Jun 2026</span>
+                    </div>
+                    <div class="py-4 flex flex-col sm:flex-row sm:justify-between gap-1">
+                        <div>
+                            <h3 class="font-medium text-white text-sm">Intensive Bootcamp 3 Weeks - Microsoft Excel</h3>
+                            <p class="text-xs text-muted">KarirNex</p>
+                        </div>
+                        <span class="font-mono text-xs text-muted">Jun 2026</span>
                     </div>
                 </div>
-                <div class="p-6 pt-0">
-                    <a href="https://drive.google.com/drive/folders/1vEXBorkRCy6aG-iWs8xOzvqeqRcK5qjf?usp=sharing" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
-                        <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
+            </div>
+
+            <!-- Organizations -->
+            <div class="grid md:grid-cols-12 gap-8">
+                <div class="md:col-span-4">
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Organizations</h2>
+                    <p class="text-sm text-muted mt-1">Leadership and operational roles.</p>
+                </div>
+                <div class="md:col-span-8 space-y-8">
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                            <h3 class="font-semibold text-white">Comdev Desa Binaan FMIPA UNJ</h3>
+                            <span class="font-mono text-xs text-muted">Jul 2024 – Jul 2025</span>
+                        </div>
+                        <p class="text-xs font-mono text-neutral-400 mt-0.5 mb-3">Staff of Logistics & Infrastructure Division</p>
+                        <ul class="text-sm text-muted space-y-1.5 list-disc pl-4">
+                            <li>Managed logistics allocation and field infrastructure readiness for community empowerment programs.</li>
+                            <li>Coordinated with internal divisions and local village stakeholders to handle operational requirements on-site.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                            <h3 class="font-semibold text-white">Majelis Perwakilan Kelas SMAN 2 Cileungsi</h3>
+                            <span class="font-mono text-xs text-muted">Feb 2022 – Feb 2023</span>
+                        </div>
+                        <p class="text-xs font-mono text-neutral-400 mt-0.5 mb-3">Vice Chairman</p>
+                        <ul class="text-sm text-muted space-y-1.5 list-disc pl-4">
+                            <li>Oversaw student council (OSIS) program evaluations and led student aspiration audits across classes.</li>
+                            <li>Chaired plenary sessions and public hearings (RDP) between student representatives and school administration.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Volunteering -->
+            <div class="grid md:grid-cols-12 gap-8">
+                <div class="md:col-span-4">
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Volunteering</h2>
+                    <p class="text-sm text-muted mt-1">Campus events and committee work.</p>
+                </div>
+                <div class="md:col-span-8 space-y-6">
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                            <h3 class="font-medium text-white text-sm">Logistics & Documentation Staff — STOKASTIK 2024</h3>
+                            <span class="font-mono text-xs text-muted">Sep 2024</span>
+                        </div>
+                        <p class="text-xs text-muted mt-1">BEMP Statistika UNJ &bull; Managed event equipment and operational logistics for the annual statistics seminar.</p>
+                    </div>
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                            <h3 class="font-medium text-white text-sm">Medical & Fundraising Committee — PKKMB Statistics 2024</h3>
+                            <span class="font-mono text-xs text-muted">Jul – Aug 2024</span>
+                        </div>
+                        <p class="text-xs text-muted mt-1">Universitas Negeri Jakarta &bull; Handled first-aid response and student orientation fundraising initiatives.</p>
+                    </div>
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                            <h3 class="font-medium text-white text-sm">Event Logistics & Operations — FESCOM 2024</h3>
+                            <span class="font-mono text-xs text-muted">Jun – Jul 2024</span>
+                        </div>
+                        <p class="text-xs text-muted mt-1">Comdev Desa Binaan FMIPA UNJ &bull; Coordinated venue logistics for the community development festival.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="grid md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-5">
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Contact</h2>
+                    <p class="text-sm text-muted mt-2 leading-relaxed">
+                        Available for Data Analyst internships, freelance data visualization, or statistical modeling collaborations.
+                    </p>
+                </div>
+
+                <div class="md:col-span-7 grid sm:grid-cols-2 gap-4">
+                    <a href="mailto:raahmadazmyr@gmail.com" class="p-4 bg-surface border border-border rounded-lg hover:border-neutral-600 transition-colors">
+                        <span class="block font-mono text-[11px] text-muted mb-1">EMAIL</span>
+                        <span class="text-sm text-white break-all">raahmadazmyr@gmail.com</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/rahmad-azmy-rizkiyansyah-dalimunthe" target="_blank" rel="noopener noreferrer" class="p-4 bg-surface border border-border rounded-lg hover:border-neutral-600 transition-colors">
+                        <span class="block font-mono text-[11px] text-muted mb-1">LINKEDIN</span>
+                        <span class="text-sm text-white">Rahmad Azmy R. Dalimunthe ↗</span>
+                    </a>
+
+                    <a href="tel:081218620566" class="p-4 bg-surface border border-border rounded-lg hover:border-neutral-600 transition-colors">
+                        <span class="block font-mono text-[11px] text-muted mb-1">PHONE / WHATSAPP</span>
+                        <span class="text-sm font-mono text-white">0812-1862-0566</span>
+                    </a>
+
+                    <a href="images/CV_ATS_Rahmad_Azmy_Updated_v3.pdf" download="CV_Rahmad_Azmy_Data_Analyst.pdf" class="p-4 bg-surface border border-border rounded-lg hover:border-neutral-600 transition-colors">
+                        <span class="block font-mono text-[11px] text-muted mb-1">RESUME</span>
+                        <span class="text-sm text-white">Download PDF ↓</span>
                     </a>
                 </div>
             </div>
+        </section>
 
-            <!-- P2: Power BI Dashboard -->
-            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
-                        <img src="images/Personal 2.png" alt="Superstore Power BI Dashboard" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Superstore Executive Sales & Profit Dashboard</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">
-                            An enterprise business report engineered with complex DAX measures, detailing year-to-date sales trajectory, margin percentage analytics, log shipping distribution models, and category distributions.
-                        </p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="https://drive.google.com/drive/folders/1OY6IK4l-44alRaPyvLjbrV6M_h1PZoGI?usp=sharing" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
-                        <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
-                    </a>
-                </div>
-            </div>
-
-            <!-- P3: Tableau Dashboard -->
-            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
-                        <img src="images/Personal 3.png" alt="Online Retail Tableau Dashboard" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Online Retail Tableau Dashboard</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Geographical tracking portal showcasing continuous revenue-by-date forecasting maps, dynamic user profiling clusters, and transaction distributions mapped across global geographic zones.
-                        </p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="https://drive.google.com/drive/folders/1y15mlEUklzq7rBl48ALjA9CAIOl9HNw7?usp=sharing" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
-                        <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
-                    </a>
-                </div>
-            </div>
-
-            <!-- P4: ML Modeling Regression Tree -->
-            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
-                        <img src="images/Personal 4.png" alt="ML Performance Analysis" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Machine Learning Regression Tree Evaluation</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Performance validation pipelines evaluating Decision Trees against Random Forest architectures using exact error variance metrics (MSE, RMSE, R-squared, MAE, and MAPE).
-                        </p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="https://drive.google.com/drive/folders/1VPaOu-no99ez54fnnIF1S8busxWgTCZ5?usp=sharing" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
-                        <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
-                    </a>
-                </div>
-            </div>
-
-            <!-- View More Personal Projects Link -->
-            <div class="col-span-1 md:col-span-2 flex justify-center mt-6">
-                <a href="https://drive.google.com/drive/folders/1Lcs5vqwPq9Fx4NQWgniwlDLCCXrjmFh2?usp=sharing" target="_blank" class="group inline-flex items-center gap-2 border border-primary/30 text-primary px-8 py-3 rounded-full font-['JetBrains_Mono'] text-sm hover:bg-primary/5 hover:border-primary transition-all duration-300">
-                    View More Personal Projects
-                    <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Group Projects Content -->
-        <div id="tab-content-group" class="grid md:grid-cols-2 gap-8 transition-all duration-500 hidden">
-            <!-- G1: Publikasi Survey -->
-            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
-                        <img src="images/Group 1.jpg" alt="Buku Publikasi Survei UNJ" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Survey Publication Book — Universitas Negeri Jakarta</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Research compilation: A comprehensive descriptive study and Structural Equation Modeling (SEM) Two-Factor analysis assessing socio-economic status, accessibility, and affordability of clean water in Matraman.
-                        </p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="https://drive.google.com/drive/folders/1qNYclHyksabWeqF8UPPwpYQbtY6KVutJ?usp=sharing" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
-                        <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
-                    </a>
-                </div>
-            </div>
-
-            <!-- G2: R Shiny Application Time Series -->
-            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
-                        <img src="images/Group 2.png" alt="R Shiny Forecasting Application" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">R Shiny Reactive Time Series Smoothing Portal</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">
-                            An interactive web portal automating time-series modeling parameters, featuring structural configurations for Holt-Winters Additive/Multiplicative variants, Simple Exponential Smoothing (SES), and rolling forecasting metrics.
-                        </p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="https://appdewabykelompok2stat23unj.shinyapps.io/APPDEWAbyKelompok2Stat23UNJ/" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
-                        <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS WEB
-                    </a>
-                </div>
-            </div>
-
-            <!-- G3: Regression Tree -->
-            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
-                        <img src="images/Group 3.png" alt="Group Tree Modeling Statistics" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Advanced Predictive Tree Architecture Comparison</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Collaborative predictive pipeline testing algorithms (Decision Trees, Random Forests, Gradient Boosting, XGBoost) against test matrices to evaluate residual distributions and baseline metrics.
-                        </p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="https://drive.google.com/drive/folders/1GI8QdusX7AFkXk_MebkBGqZ4UtzIgQdl?usp=sharing" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
-                        <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
-                    </a>
-                </div>
-            </div>
-
-            <!-- G4: Infografis -->
-            <div class="glass-card glow-hover rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden bg-[#1a1b20] border-b border-white/10 relative">
-                        <img src="images/Group 4.png" alt="Demographic Infographics Poster" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Demographic Infographics: Technology & Digital Economy</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Data advocacy dashboard charting internet consumption trends, digital literacy distribution splits, and analytical solutions targeting Indonesia's demographic bonus.
-                        </p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="https://drive.google.com/drive/folders/1JqUKsNZcQLiwXqHCXGGzRT-rThqZ-iYS?usp=sharing" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline">
-                        <span class="material-symbols-outlined text-sm">cloud_download</span> ACCESS GOOGLE DRIVE
-                    </a>
-                </div>
-            </div>
-
-            <!-- View More Group Projects Link -->
-            <div class="col-span-1 md:col-span-2 flex justify-center mt-6">
-                <a href="https://drive.google.com/drive/folders/1nWEDICeN3C7dwmGTalpVqipbH_SiIDiW?usp=sharing" target="_blank" class="group inline-flex items-center gap-2 border border-primary/30 text-primary px-8 py-3 rounded-full font-['JetBrains_Mono'] text-sm hover:bg-primary/5 hover:border-primary transition-all duration-300">
-                    View More Group Projects
-                    <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Organizations Section -->
-    <section id="organizations" class="py-16 px-6 max-w-4xl mx-auto reveal-on-scroll active">
-        <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-12">Organizations</h2>
-        <div class="space-y-8">
-            <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
-                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-2"></div>
-                <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">Jul 2024 – Jul 2025</span>
-                <h3 class="text-xl font-bold mt-2">Comdev Desa Binaan FMIPA UNJ</h3>
-                <p class="text-sm text-white/60 mb-3">Staff of Logistics & Infrastructure Division</p>
-                <ol class="space-y-2 text-on-surface-variant text-sm list-decimal pl-4">
-                    <li>Planned, managed, and distributed logistical resources efficiently to fully support the seamless execution of community service and empowerment programs.</li>
-                    <li>Coordinated proactively with internal teams and local community leaders to ensure the readiness of infrastructure and facilities for resident education initiatives.</li>
-                    <li>Demonstrated swift and responsive problem-solving skills in resolving technical and operational bottlenecks directly in the field.</li>
-                </ol>
-            </div>
-            <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
-                <div class="absolute w-3 h-3 bg-primary/50 rounded-full -left-[7px] top-2"></div>
-                <span class="text-xs font-['JetBrains_Mono'] text-white/40">Feb 2022 – Feb 2023</span>
-                <h3 class="text-xl font-bold mt-2">Majelis Perwakilan Kelas SMA Negeri 2 Cileungsi</h3>
-                <p class="text-sm text-white/60 mb-3">Vice Chairman</p>
-                <ol class="space-y-2 text-on-surface-variant text-sm list-decimal pl-4">
-                    <li>Assisted the Chairman in leading the student parliamentary body while executing objective monitoring and evaluation functions regarding the effectiveness of Student Council (OSIS) work programs.</li>
-                    <li>Responsible for gathering, analyzing, and communicating aspirations from hundreds of students to school management to foster inclusive institutional policies.</li>
-                    <li>Coordinated various public hearings (RDP) and school plenary sessions, sharpening skills in negotiation, public speaking, and conflict resolution.</li>
-                </ol>
-            </div>
-        </div>
-    </section>
-
-    <!-- Volunteering Section -->
-    <section id="volunteering" class="py-16 px-6 max-w-4xl mx-auto reveal-on-scroll active">
-        <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-12">Volunteering</h2>
-        <div class="space-y-8">
-            <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
-                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-2"></div>
-                <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">Jul 2024 – Aug 2024</span>
-                <h3 class="text-xl font-bold mt-2">Medical and Fundraising Committee At PKKMB Statistics 2024</h3>
-                <p class="text-sm text-white/60 mb-2">State University of Jakarta (Universitas Negeri Jakarta)</p>
-                <p class="text-on-surface-variant text-sm leading-relaxed">
-                    Served as a dual-role committee member responsible for managing both emergency medical responses and creative fundraising strategies for the Statistics Freshmen Orientation (PKKMB Statistika).
-                </p>
-            </div>
-            <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
-                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-2"></div>
-                <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">Sep 2024</span>
-                <h3 class="text-xl font-bold mt-2">Logistics and Documentation Staff At Share and Talk about Statistics (STOKASTIK)</h3>
-                <p class="text-sm text-white/60 mb-2">State University of Jakarta (Universitas Negeri Jakarta)</p>
-                <p class="text-on-surface-variant text-sm leading-relaxed">
-                    Served as a Logistics and Operations Staff for "Share and Talk about Statistics (STOKASTIK) 2024," a seminar and talk show event held by the Statistics Student Association (BEMP Statistika).
-                </p>
-            </div>
-            <div class="border-l-2 border-primary/30 pl-6 ml-4 relative">
-                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-2"></div>
-                <span class="text-xs font-['JetBrains_Mono'] text-primary bg-primary/10 px-3 py-1 rounded-full">Jun 2024 – Jul 2024</span>
-                <h3 class="text-xl font-bold mt-2">Event Logistics and Operations Staff At Festival Community Development (FESCOM) 2024</h3>
-                <p class="text-sm text-white/60 mb-2">Comdev Desa Binaan FMIPA UNJ</p>
-                <p class="text-on-surface-variant text-sm leading-relaxed">
-                    Served as an Event Operations Committee member for the "Festival Community Development (FESCOM) 2024," an initiative organized by Desa Binaan FMIPA UNJ focusing on community empowerment.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 px-6 max-w-4xl mx-auto reveal-on-scroll active">
-        <h2 class="font-['Chivo'] text-3xl md:text-5xl font-black text-white text-center mb-6">Get In Touch</h2>
-        <p class="text-on-surface-variant text-center max-w-xl mx-auto mb-12">
-            Feel free to reach out for Data Analyst internship opportunities, project collaborations, or statistical analysis consultations.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Phone -->
-            <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex flex-col items-center text-center glow-hover">
-                <span class="material-symbols-outlined text-primary text-3xl mb-3">call</span>
-                <h3 class="font-bold text-white mb-1">Phone</h3>
-                <a href="tel:081218620566" class="text-sm text-on-surface-variant hover:text-primary transition-colors font-['JetBrains_Mono']">081218620566</a>
-            </div>
-            <!-- Email -->
-            <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex flex-col items-center text-center glow-hover">
-                <span class="material-symbols-outlined text-primary text-3xl mb-3">mail</span>
-                <h3 class="font-bold text-white mb-1">Email</h3>
-                <a href="mailto:raahmadazmyr@gmail.com" class="text-sm text-on-surface-variant hover:text-primary transition-colors font-['JetBrains_Mono'] break-all">raahmadazmyr@gmail.com</a>
-            </div>
-            <!-- LinkedIn -->
-            <div class="glass-card p-6 rounded-xl border border-white/10 bg-white/5 flex flex-col items-center text-center glow-hover">
-                <span class="material-symbols-outlined text-primary text-3xl mb-3">account_circle</span>
-                <h3 class="font-bold text-white mb-1">LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/rahmad-azmy-rizkiyansyah-dalimunthe" target="_blank" class="text-sm text-on-surface-variant hover:text-primary transition-colors font-['JetBrains_Mono']">View Profile</a>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="border-t border-white/10 py-8 text-center text-xs text-white/40 font-['JetBrains_Mono']">
-        <p>&copy; 2026 Rahmad Azmy Rizkiyansyah Dalimunthe. Data & Analytics Portfolio.</p>
+    <footer class="border-t border-border py-8 px-6">
+        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-mono text-muted">
+            <p>&copy; 2026 Rahmad Azmy</p>
+            <div class="flex gap-6">
+                <a href="#home" class="hover:text-white transition-colors">Top ↑</a>
+                <a href="https://www.linkedin.com/in/rahmad-azmy-rizkiyansyah-dalimunthe" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="mailto:raahmadazmyr@gmail.com" class="hover:text-white transition-colors">Email</a>
+            </div>
+        </div>
     </footer>
 
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu-overlay" class="fixed inset-0 z-[60] bg-[#121317]/95 backdrop-blur-xl translate-x-full transition-transform duration-500 md:hidden flex flex-col">
-        <div class="flex justify-between items-center h-20 px-6">
-            <a class="font-['Chivo'] text-2xl font-black text-primary tracking-tighter" href="#">MY.PORTFOLIO</a>
-            <button id="mobile-menu-close" class="p-2 text-white">
-                <span class="material-symbols-outlined text-3xl">close</span>
-            </button>
-        </div>
-        <nav class="flex flex-col items-center justify-center flex-grow gap-6 text-center">
-            <a class="text-primary text-xl font-bold" href="#about" onclick="toggleMenu()">About</a>
-            <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#education" onclick="toggleMenu()">Education</a>
-            <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#certificates" onclick="toggleMenu()">Certificates</a>
-            <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#projects" onclick="toggleMenu()">Projects</a>
-            <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#organizations" onclick="toggleMenu()">Organizations</a>
-            <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#volunteering" onclick="toggleMenu()">Volunteering</a>
-            <a class="text-on-surface-variant text-xl font-bold hover:text-primary" href="#contact" onclick="toggleMenu()">Contact</a>
-        </nav>
-    </div>
+    <!-- Minimal Script for Tabs & Mobile Menu -->
+    <script>
+        function switchTab(type) {
+            const personalGrid = document.getElementById('grid-personal');
+            const groupGrid = document.getElementById('grid-group');
+            const btnPersonal = document.getElementById('tab-personal');
+            const btnGroup = document.getElementById('tab-group');
 
-    <script src="js/script.js"></script>
+            if (type === 'personal') {
+                personalGrid.classList.remove('hidden');
+                groupGrid.classList.add('hidden');
+                btnPersonal.className = 'px-4 py-1.5 text-xs font-mono rounded bg-white text-black font-medium transition-colors';
+                btnGroup.className = 'px-4 py-1.5 text-xs font-mono rounded text-muted hover:text-white transition-colors';
+            } else {
+                personalGrid.classList.add('hidden');
+                groupGrid.classList.remove('hidden');
+                btnGroup.className = 'px-4 py-1.5 text-xs font-mono rounded bg-white text-black font-medium transition-colors';
+                btnPersonal.className = 'px-4 py-1.5 text-xs font-mono rounded text-muted hover:text-white transition-colors';
+            }
+        }
+
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+    </script>
 </body>
 
 </html>
